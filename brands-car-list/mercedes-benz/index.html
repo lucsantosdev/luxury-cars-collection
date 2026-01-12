@@ -3,46 +3,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-        .content {
-            text-align: center;
-        }
-        .title {
-            color: #363636;
-        }
-        .subtitle {
-            color: #4a4a4a;
-        }
-        .icon {
-            margin-bottom: 20px;
-            color: #3273dc;
-        }
-        .button {
-            margin-top: 20px;
-        }
-    </style>
+    <title>Mercedes-Benz USA - Luxury Cars, SUVs, Sedans & More</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+ 
 </head>
 <body>
-    <section class="section">
-        <div class="container content">
-            <span class="icon">
-                <i class="fas fa-tools fa-3x"></i>
-            </span>
-            <h1 class="title">Under Construction</h1>
-            <p class="subtitle">Sit and grab a coffee. I'm still building this page for you.</p>
-            <p>Check back soon to explore this amazing page about Mercedes-Benz's cars!</p>
-            <a href="../../index.html"><button class="button is-link" onclick="history.back()">Go Back</button></a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="mb-star">
+                    <i class="fas fa-star"></i>
+                </div>
+                Mercedes-Benz
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#models">Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#innovation">Innovation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#amg">AMG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#technology">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-label">The New Era of Luxury</div>
+            <h1 class="hero-title">EQS Sedan</h1>
+            <p class="hero-tagline">The Best or Nothing</p>
+            <p class="hero-description">
+                The first electric vehicle from Mercedes-EQ in the luxury segment.<br>
+                Experience the future of luxury with innovative technology and stunning design.
+            </p>
+            <div>
+                <button class="btn btn-mb">Explore EQS</button>
+                <button class="btn btn-mb-outline">Build & Price</button>
+            </div>
         </div>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <!-- Featured Model - S-Class -->
+    <section class="featured-model" id="models">
+        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1920&h=1080&fit=crop" 
+             alt="Mercedes-Benz S-Class" class="featured-bg">
+        <div class="featured-overlay">
+            <div class="featured-content">
+                <div class="featured-label">The Pinnacle of Luxury</div>
+                <h3 class="featured-title">S-Class</h3>
+                <p class="featured-desc">
+                    The automotive benchmark for over 70 years. The new S-Class sets the standard 
+                    with groundbreaking innovations, exquisite design, and supreme comfort.
+                </p>
+                <div class="featured-specs">
+                    <div class="spec-box">
+                        <div class="spec-value">503</div>
+                        <div class="spec-label">HP</div>
+                    </div>
+                    <div class="spec-box">
+                        <div class="spec-value">4.0s</div>
+                        <div class="spec-label">0-60 MPH</div>
+                    </div>
+                    <div class="spec-box">
+                        <div class="spec-value">130</div>
+                        <div class="spec-label">MPH Top Speed</div>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-mb">Discover S-Class</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Grid -->
+    <section class="models-section">
+        <div class="container">
+            <div class="section-header scroll-animation">
+                <div class="section-tag">Our Collection</div>
+                <h2 class="section-title">Luxury Redefined</h2>
+                <p class="section-description">
+                    From electric sedans to high-performance SUVs, every Mercedes-Benz vehicle 
+                    represents the perfect synthesis of luxury, innovation, and performance.
+                </p>
+            </div>
+
+            <div class="models-grid">
+                <div class="model-card scroll-animation">
+                    <div class="model-card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=1000&h=700&fit=crop" 
+                             alt="Mercedes-Benz EQE" class="model-card-img">
+                    </div>
+                    <div class="model-card-content">
+                        <div class="model-card-label">Electric Luxury</div>
+                        <h3 class="model-card-title">EQE Sedan</h3>
+                        <p class="model-card-desc">
+                            Progressive luxury meets electric performance. The EQE combines innovative 
+                            technology with signature Mercedes-Benz comfort and refinement.
+                        </p>
+                        <a href="#" class="model-card-link">
+                            Explore EQE <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="model-card scroll-animation">
+                    <div class="model-card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1000&h=700&fit=crop" 
+                             alt="Mercedes-Benz G-Class" class="model-card-img">
+                    </div>
+                    <div class="model-card-content">
+                        <div class="model-card-label">Iconic Legend</div>
+                        <h3 class="model-card-title">G-Class</h3>
+                        <p class="model-card-desc">
+                            An icon for over four decades. The G-Class combines uncompromising off-road 
+                            capability with luxury refinement and unmistakable design.
+                        </p>
+                        <a href="#" class="model-card-link">
+                            Explore G-Class <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="model-card scroll-animation">
+                    <div class="model-card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1000&h=700&fit=crop" 
+                             alt="Mercedes-Benz GLE" class="model-card-img">
+                    </div>
+                    <div class="model-card-content">
+                        <div class="model-card-label">Versatile Excellence</div>
+                        <h3 class="model-card-title">GLE SUV</h3>
+                        <p class="model-card-desc">
+                            The perfect blend of capability and comfort. Advanced technology and spacious 
+                            luxury in a sophisticated SUV package.
+                        </p>
+                        <a href="#" class="model-card-link">
+                            Explore GLE <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="model-card scroll-animation">
+                    <div class="model-card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=1000&h=700&fit=crop" 
+                             alt="Mercedes-Benz E-Class" class="model-card-img">
+                    </div>
+                    <div class="model-card-content">
+                        <div class="model-card-label">Business Class</div>
+                        <h3 class="model-card-title">E-Class</h3>
+                        <p class="model-card-desc">
+                            The quintessential business sedan. Sophisticated design, cutting-edge technology, 
+                            and refined performance define the E-Class experience.
+                        </p>
+                        <a href="#" class="model-card-link">
+                            Explore E-Class <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Section -->
+    <section class="innovation-section" id="innovation">
+        <div class="container">
+            <div class="innovation-grid">
+                <div class="innovation-text scroll-animation">
+                    <h2>Inventing the <span class="highlight">Future of Mobility</span></h2>
+                    <p>
+                        For over 135 years, Mercedes-Benz has been at the forefront of automotive 
+                        innovation. From inventing the first automobile to pioneering electric luxury, 
+                        we continue to shape the future of mobility.
+                    </p>
+                    <p>
+                        Our commitment to innovation extends beyond the vehicle itself. We're developing 
+                        sustainable production methods, autonomous driving technology, and connected 
+                        services that enhance every journey.
+                    </p>
+                    <ul class="innovation-features">
+                        <li><i class="fas fa-bolt"></i> Mercedes-EQ Electric Technology</li>
+                        <li><i class="fas fa-brain"></i> MBUX Hyperscreen Intelligence</li>
+                        <li><i class="fas fa-shield-alt"></i> Advanced Safety Systems</li>
+                        <li><i class="fas fa-leaf"></i> Sustainable Manufacturing</li>
+                        <li><i class="fas fa-satellite"></i> Connected Vehicle Services</li>
+                        <li><i class="fas fa-microchip"></i> Level 3 Autonomous Driving</li>
+                    </ul>
+                    <button class="btn btn-mb">Learn More</button>
+                </div>
+                <div class="scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1000&h=800&fit=crop" 
+                         alt="Mercedes-Benz Innovation" class="innovation-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AMG Performance -->
+    <section class="amg-section" id="amg">
+        <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?w=1920&h=1080&fit=crop" 
+             alt="Mercedes-AMG" class="amg-bg">
+        <div class="amg-overlay">
+            <div class="amg-logo">Mercedes-AMG</div>
+            <h2 class="amg-title">AMG GT</h2>
+            <p class="amg-desc">
+                Driving Performance. The essence of AMG. Hand-built engines, race-proven technology, 
+                and uncompromising performance define every Mercedes-AMG vehicle.
+            </p>
+            <div class="amg-stats">
+                <div class="amg-stat">
+                    <div class="amg-stat-value">730</div>
+                    <div class="amg-stat-label">HP</div>
+                </div>
+                <div class="amg-stat">
+                    <div class="amg-stat-value">2.9s</div>
+                    <div class="amg-stat-label">0-60 MPH</div>
+                </div>
+                <div class="amg-stat">
+                    <div class="amg-stat-value">196</div>
+                    <div class="amg-stat-label">MPH Top Speed</div>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-mb">Explore AMG</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="tech-section" id="technology">
+        <div class="container">
+            <div class="section-header scroll-animation">
+                <div class="section-tag">Advanced Systems</div>
+                <h2 class="section-title">Pioneering Technology</h2>
+                <p class="section-description">
+                    Mercedes-Benz vehicles integrate the most advanced automotive technology, 
+                    from intelligent driver assistance to intuitive connectivity systems.
+                </p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card scroll-animation">
+                    <div class="tech-icon">
+                        <i class="fas fa-display"></i>
+                    </div>
+                    <h3 class="tech-title">MBUX Hyperscreen</h3>
+                    <p class="tech-text">
+                        The revolutionary curved display spanning the entire dashboard, powered by AI 
+                        that learns your preferences and adapts to your needs.
+                    </p>
+                </div>
+
+                <div class="tech-card scroll-animation">
+                    <div class="tech-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="tech-title">Drive Pilot</h3>
+                    <p class="tech-text">
+                        Level 3 autonomous driving technology that allows hands-free driving in 
+                        suitable traffic conditions with certified reliability.
+                    </p>
+                </div>
+
+                <div class="tech-card scroll-animation">
+                    <div class="tech-icon">
+                        <i class="fas fa-car-burst"></i>
+                    </div>
+                    <h3 class="tech-title">PRE-SAFE®</h3>
+                    <p class="tech-text">
+                        Anticipatory safety system that detects imminent accidents and automatically 
+                        prepares protective measures for occupants.
+                    </p>
+                </div>
+
+                <div class="tech-card scroll-animation">
+                    <div class="tech-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3 class="tech-title">AIRMATIC</h3>
+                    <p class="tech-text">
+                        Adaptive air suspension that continuously adjusts damping for optimal comfort 
+                        and dynamic handling in all conditions.
+                    </p>
+                </div>
+
+                <div class="tech-card scroll-animation">
+                    <div class="tech-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3 class="tech-title">Burmester® 4D</h3>
+                    <p class="tech-text">
+                        High-end surround sound system with bass transducers that create a multi-sensory 
+                        audio experience throughout the cabin.
+                    </p>
+                </div>
+
+                <div class="tech-card scroll-animation">
+                    <div class="tech-icon">
+                        <i class="fas fa-charging-station"></i>
+                    </div>
+                    <h3 class="tech-title">EQ Technology</h3>
+                    <p class="tech-text">
+                        Advanced electric powertrains with intelligent energy management and rapid 
+                        charging capability for the ultimate EV experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-brand">
+                        <h3>
+                            <div class="mb-star" style="width: 40px; height: 40px;">
+                                <i class="fas fa-star" style="font-size: 1.5rem;"></i>
+                            </div>
+                            Mercedes-Benz
+                        </h3>
+                        <p class="footer-text">
+                            Since 1886, Mercedes-Benz has been setting the standard for automotive 
+                            excellence. From inventing the first automobile to pioneering electric luxury, 
+                            we continue our legacy of innovation, performance, and uncompromising quality.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Models</h5>
+                    <a href="#" class="footer-link">Sedans</a>
+                    <a href="#" class="footer-link">SUVs</a>
+                    <a href="#" class="footer-link">Coupes</a>
+                    <a href="#" class="footer-link">Convertibles</a>
+                    <a href="#" class="footer-link">Mercedes-EQ</a>
+                    <a href="#" class="footer-link">Mercedes-AMG</a>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Shopping</h5>
+                    <a href="#" class="footer-link">Build & Price</a>
+                    <a href="#" class="footer-link">Find a Dealer</a>
+                    <a href="#" class="footer-link">Request Quote</a>
+                    <a href="#" class="footer-link">Certified Pre-Owned</a>
+                    <a href="#" class="footer-link">Finance Options</a>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Ownership</h5>
+                    <a href="#" class="footer-link">Mercedes me</a>
+                    <a href="#" class="footer-link">Service & Parts</a>
+                    <a href="#" class="footer-link">Roadside Assistance</a>
+                    <a href="#" class="footer-link">Warranty</a>
+                    <a href="#" class="footer-link">Owner's Manual</a>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Company</h5>
+                    <a href="#" class="footer-link">About MB USA</a>
+                    <a href="#" class="footer-link">Innovation</a>
+                    <a href="#" class="footer-link">Sustainability</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">News</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mercedes-Benz USA, LLC. All rights reserved. | Privacy Statement | Legal Notice | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    
 </body>
 </html>
