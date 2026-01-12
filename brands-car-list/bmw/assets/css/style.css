@@ -1,0 +1,676 @@
+:root {
+    --bmw-blue: #1C69D4;
+    --bmw-dark-blue: #0f4c9e;
+    --bmw-light-blue: #4d8ee6;
+    --bmw-black: #000000;
+    --bmw-white: #ffffff;
+    --bmw-gray: #f4f4f4;
+    --bmw-dark-gray: #262626;
+    --text-dark: #1a1a1a;
+    --text-gray: #6f6f6f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bmw-white);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 1.2rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 0.7rem 0;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--bmw-black) !important;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.bmw-logo {
+    width: 45px;
+    height: 45px;
+    background: conic-gradient(from 0deg at 50% 50%, 
+        var(--bmw-blue) 0deg 90deg,
+        var(--bmw-white) 90deg 180deg,
+        var(--bmw-blue) 180deg 270deg,
+        var(--bmw-white) 270deg 360deg);
+    border-radius: 50%;
+    border: 3px solid var(--bmw-black);
+    position: relative;
+}
+
+.bmw-logo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid var(--bmw-black);
+}
+
+.nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0 1.2rem;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    color: var(--bmw-blue) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 80% 20%, rgba(28, 105, 212, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(28, 105, 212, 0.06) 0%, transparent 50%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+    max-width: 1100px;
+    padding: 2rem;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background-color: var(--bmw-blue);
+    color: var(--bmw-white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    border-radius: 50px;
+}
+
+.hero-title {
+    font-size: 5.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    color: var(--bmw-black);
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    color: var(--bmw-blue);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 3rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.btn-bmw {
+    padding: 1.1rem 3.5rem;
+    background-color: var(--bmw-blue);
+    border: none;
+    color: var(--bmw-white);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+    border-radius: 0;
+}
+
+.btn-bmw:hover {
+    background-color: var(--bmw-dark-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(28, 105, 212, 0.3);
+    color: var(--bmw-white);
+}
+
+.btn-bmw-outline {
+    padding: 1.1rem 3.5rem;
+    background-color: transparent;
+    border: 2px solid var(--bmw-black);
+    color: var(--bmw-black);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+    border-radius: 0;
+}
+
+.btn-bmw-outline:hover {
+    background-color: var(--bmw-black);
+    color: var(--bmw-white);
+    transform: translateY(-3px);
+}
+
+/* Models Grid Section */
+.models-grid-section {
+    padding: 0;
+    background-color: var(--bmw-white);
+}
+
+.model-grid-item {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    cursor: pointer;
+}
+
+.model-grid-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.model-grid-item:hover .model-grid-bg {
+    transform: scale(1.1);
+}
+
+.model-grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3rem;
+    color: var(--bmw-white);
+}
+
+.model-category {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bmw-light-blue);
+    margin-bottom: 0.5rem;
+}
+
+.model-grid-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.model-grid-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.model-grid-link {
+    color: var(--bmw-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.model-grid-link:hover {
+    color: var(--bmw-light-blue);
+    gap: 1rem;
+}
+
+/* Features Section */
+.features-section {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, var(--bmw-gray) 0%, var(--bmw-white) 100%);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-tag {
+    color: var(--bmw-blue);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--bmw-black);
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.feature-card {
+    background-color: var(--bmw-white);
+    padding: 3rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    height: 100%;
+    border: 1px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(28, 105, 212, 0.15);
+    border-color: var(--bmw-blue);
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    color: var(--bmw-blue);
+    margin-bottom: 2rem;
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--bmw-black);
+}
+
+.feature-text {
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.7;
+}
+
+/* M Performance Section */
+.m-performance-section {
+    padding: 0;
+    background-color: var(--bmw-black);
+    color: var(--bmw-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.m-performance-content {
+    display: flex;
+    align-items: center;
+    min-height: 700px;
+}
+
+.m-performance-text {
+    padding: 5rem;
+    flex: 1;
+}
+
+.m-badge {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(135deg, #1C69D4 0%, #0f4c9e 50%, #d32f2f 100%);
+    color: var(--bmw-white);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 2rem;
+}
+
+.m-performance-text h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.m-performance-text p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.m-performance-img {
+    flex: 1;
+    height: 700px;
+}
+
+.m-performance-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Electric Section */
+.electric-section {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 100%);
+    position: relative;
+}
+
+.electric-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    background-image: repeating-linear-gradient(45deg, var(--bmw-blue) 0px, var(--bmw-blue) 2px, transparent 2px, transparent 10px);
+}
+
+.electric-content {
+    position: relative;
+    z-index: 2;
+}
+
+.electric-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.electric-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: var(--bmw-black);
+}
+
+.electric-text .highlight {
+    color: var(--bmw-blue);
+}
+
+.electric-text p {
+    font-size: 1.15rem;
+    color: var(--text-gray);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.electric-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.electric-stat {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--bmw-white);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.electric-stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--bmw-blue);
+    margin-bottom: 0.5rem;
+}
+
+.electric-stat-label {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.electric-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Stats Banner */
+.stats-banner {
+    padding: 5rem 0;
+    background-color: var(--bmw-dark-gray);
+    color: var(--bmw-white);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--bmw-light-blue);
+    margin-bottom: 1rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--bmw-black);
+    padding: 5rem 0 2rem;
+    color: var(--bmw-white);
+}
+
+.footer-brand {
+    margin-bottom: 2rem;
+}
+
+.footer-brand h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--bmw-white);
+    font-weight: 600;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-link:hover {
+    color: var(--bmw-light-blue);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bmw-white);
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-link:hover {
+    background-color: var(--bmw-blue);
+    border-color: var(--bmw-blue);
+    color: var(--bmw-white);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    padding-top: 3rem;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.scroll-animation.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .m-performance-content {
+        flex-direction: column;
+    }
+
+    .m-performance-text h2 {
+        font-size: 3rem;
+    }
+
+    .electric-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .model-grid-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .btn-bmw,
+    .btn-bmw-outline {
+        display: block;
+        margin: 0.5rem auto;
+    }
+
+    .electric-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
