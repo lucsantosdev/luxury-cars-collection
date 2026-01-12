@@ -3,46 +3,394 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-        .content {
-            text-align: center;
-        }
-        .title {
-            color: #363636;
-        }
-        .subtitle {
-            color: #4a4a4a;
-        }
-        .icon {
-            margin-bottom: 20px;
-            color: #3273dc;
-        }
-        .button {
-            margin-top: 20px;
-        }
-    </style>
+    <title>Ferrari - The Official Site</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <section class="section">
-        <div class="container content">
-            <span class="icon">
-                <i class="fas fa-tools fa-3x"></i>
-            </span>
-            <h1 class="title">Under Construction</h1>
-            <p class="subtitle">Sit and grab a coffee. I'm still building this page for you.</p>
-            <p>Check back soon to explore this amazing page about Ferrari's cars!</p>
-            <a href="../../index.html"><button class="button is-link" onclick="history.back()">Go Back</button></a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="prancing-horse">🐎</div>
+                FERRARI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#models">Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#racing">Racing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#performance">Performance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Passione Italiana</div>
+            <h1 class="hero-title">FERRARI<br><span class="ferrari-red-text">LEGENDS</span></h1>
+            <p class="hero-subtitle">We Are The Competition</p>
+            <p class="hero-description">
+                Born from racing. Driven by passion. For over 75 years, Ferrari has been<br>
+                the ultimate expression of Italian excellence, performance, and style.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-ferrari">Discover Ferrari</button>
+                <button class="btn btn-ferrari-outline">Configure Yours</button>
+            </div>
         </div>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <!-- Featured Model Hero -->
+    <section class="models-showcase" id="models">
+        <div class="model-hero">
+            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=1920&h=1080&fit=crop" 
+                 alt="Ferrari SF90" class="model-hero-bg">
+            <div class="model-hero-content">
+                <div class="model-category">Hybrid Supercar</div>
+                <h3 class="model-hero-title">SF90 STRADALE</h3>
+                <p class="model-hero-desc">The first series production plug-in hybrid spider in Ferrari history</p>
+                <div class="model-specs-inline">
+                    <div class="spec-inline">
+                        <div class="spec-value-inline">1000</div>
+                        <div class="spec-label-inline">CV</div>
+                    </div>
+                    <div class="spec-inline">
+                        <div class="spec-value-inline">2.5s</div>
+                        <div class="spec-label-inline">0-100 km/h</div>
+                    </div>
+                    <div class="spec-inline">
+                        <div class="spec-value-inline">340</div>
+                        <div class="spec-label-inline">km/h Top Speed</div>
+                    </div>
+                </div>
+                <a href="#" class="model-link">
+                    Explore SF90 <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Grid -->
+    <section class="models-grid-section">
+        <div class="container">
+            <div class="section-header scroll-animation">
+                <div class="section-tag">Our Range</div>
+                <h2 class="section-title">MODERN CLASSICS</h2>
+                <p class="section-description">
+                    Each Ferrari is a unique combination of beauty and performance, designed to deliver 
+                    an unparalleled driving experience that stirs the emotions.
+                </p>
+            </div>
+
+            <div class="models-grid">
+                <div class="model-card scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=1000&h=700&fit=crop" 
+                         alt="Ferrari 296 GTB" class="model-card-img">
+                    <div class="model-card-content">
+                        <div class="model-category">V6 Hybrid</div>
+                        <h3 class="model-card-title">296 GTB</h3>
+                        <p class="model-card-subtitle">The new benchmark for fun behind the wheel</p>
+                        <a href="#" class="model-link">
+                            Discover More <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="model-card scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1606220838315-056192d5e927?w=1000&h=700&fit=crop" 
+                         alt="Ferrari 812 Superfast" class="model-card-img">
+                    <div class="model-card-content">
+                        <div class="model-category">V12</div>
+                        <h3 class="model-card-title">812 SUPERFAST</h3>
+                        <p class="model-card-subtitle">The most powerful and fastest Ferrari in history</p>
+                        <a href="#" class="model-link">
+                            Discover More <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="model-card scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1610768764270-790fbec18178?w=1000&h=700&fit=crop" 
+                         alt="Ferrari Roma" class="model-card-img">
+                    <div class="model-card-content">
+                        <div class="model-category">Grand Tourer</div>
+                        <h3 class="model-card-title">ROMA</h3>
+                        <p class="model-card-subtitle">Timeless elegance meets contemporary design</p>
+                        <a href="#" class="model-link">
+                            Discover More <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="model-card scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1000&h=700&fit=crop" 
+                         alt="Ferrari Purosangue" class="model-card-img">
+                    <div class="model-card-content">
+                        <div class="model-category">SUV</div>
+                        <h3 class="model-card-title">PUROSANGUE</h3>
+                        <p class="model-card-subtitle">The first ever four-door four-seater Ferrari</p>
+                        <a href="#" class="model-link">
+                            Discover More <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Racing Heritage -->
+    <section class="racing-section" id="racing">
+        <div class="racing-bg"></div>
+        <div class="container racing-content">
+            <div class="racing-grid">
+                <div class="racing-text scroll-animation">
+                    <h2>BORN IN THE RACE</h2>
+                    <p>
+                        Since 1929, Scuderia Ferrari has been the beating heart of our brand. With over 240 Grand Prix 
+                        victories and 16 Constructors' World Championship titles, we are the most successful team 
+                        in Formula 1 history.
+                    </p>
+                    <p>
+                        Every innovation born on the track finds its way into our road cars, creating an unbreakable 
+                        link between racing heritage and everyday excellence.
+                    </p>
+                    <button class="btn btn-ferrari-outline">Our Racing Legacy</button>
+
+                    <div class="racing-achievements">
+                        <div class="achievement">
+                            <div class="achievement-number">16</div>
+                            <div class="achievement-label">Constructors' Titles</div>
+                        </div>
+                        <div class="achievement">
+                            <div class="achievement-number">15</div>
+                            <div class="achievement-label">Drivers' Titles</div>
+                        </div>
+                        <div class="achievement">
+                            <div class="achievement-number">240+</div>
+                            <div class="achievement-label">GP Victories</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1000&h=800&fit=crop" 
+                         alt="Ferrari F1" class="racing-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section class="performance-section" id="performance">
+        <div class="container">
+            <div class="section-header scroll-animation">
+                <div class="section-tag">Excellence</div>
+                <h2 class="section-title" style="color: var(--ferrari-white);">UNCOMPROMISING PERFORMANCE</h2>
+                <p class="section-description" style="color: rgba(255, 255, 255, 0.8);">
+                    Every Ferrari is engineered to deliver breathtaking performance through innovative technology 
+                    and meticulous attention to detail.
+                </p>
+            </div>
+
+            <div class="performance-grid">
+                <div class="performance-card scroll-animation">
+                    <div class="performance-icon">
+                        <i class="fas fa-engine"></i>
+                    </div>
+                    <h3 class="performance-title">Power</h3>
+                    <p class="performance-text">
+                        From naturally aspirated V12s to cutting-edge hybrid systems, Ferrari engines deliver 
+                        exhilarating performance and an unmistakable soundtrack.
+                    </p>
+                </div>
+
+                <div class="performance-card scroll-animation">
+                    <div class="performance-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3 class="performance-title">Aerodynamics</h3>
+                    <p class="performance-text">
+                        Advanced aerodynamics developed in our wind tunnel and F1 program ensure maximum downforce 
+                        and exceptional high-speed stability.
+                    </p>
+                </div>
+
+                <div class="performance-card scroll-animation">
+                    <div class="performance-icon">
+                        <i class="fas fa-weight-hanging"></i>
+                    </div>
+                    <h3 class="performance-title">Lightweight</h3>
+                    <p class="performance-text">
+                        Extensive use of carbon fiber and aluminum creates the perfect balance between structural 
+                        rigidity and weight reduction.
+                    </p>
+                </div>
+
+                <div class="performance-card scroll-animation">
+                    <div class="performance-icon">
+                        <i class="fas fa-gauge-high"></i>
+                    </div>
+                    <h3 class="performance-title">Dynamics</h3>
+                    <p class="performance-text">
+                        Advanced electronic systems including Side Slip Control ensure maximum performance with 
+                        exceptional drivability.
+                    </p>
+                </div>
+
+                <div class="performance-card scroll-animation">
+                    <div class="performance-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3 class="performance-title">Precision</h3>
+                    <p class="performance-text">
+                        State-of-the-art manufacturing processes and quality control ensure every component meets 
+                        our exacting standards.
+                    </p>
+                </div>
+
+                <div class="performance-card scroll-animation">
+                    <div class="performance-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="performance-title">Emotion</h3>
+                    <p class="performance-text">
+                        Beyond the numbers, every Ferrari delivers an emotional connection between driver and 
+                        machine that defies description.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section" id="experience">
+        <div class="container">
+            <div class="experience-grid">
+                <div class="scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1000&h=800&fit=crop" 
+                         alt="Ferrari Craftsmanship" class="experience-img">
+                </div>
+                <div class="experience-text scroll-animation">
+                    <h2>The <span class="highlight">Ferrari</span> Experience</h2>
+                    <p>
+                        Owning a Ferrari is more than possessing a car - it's joining an exclusive family united 
+                        by a passion for excellence and a love for the Prancing Horse.
+                    </p>
+                    <p>
+                        From personalized customization through our Tailor Made program to exclusive events and 
+                        racing experiences, we offer our clients access to a world of privileges.
+                    </p>
+                    <ul class="experience-features">
+                        <li><i class="fas fa-check-circle"></i> Tailor Made Personalization Program</li>
+                        <li><i class="fas fa-check-circle"></i> Corse Clienti Racing Programs</li>
+                        <li><i class="fas fa-check-circle"></i> Exclusive Events & Drive Experiences</li>
+                        <li><i class="fas fa-check-circle"></i> Factory Tours in Maranello</li>
+                        <li><i class="fas fa-check-circle"></i> Heritage Certification & Classiche</li>
+                        <li><i class="fas fa-check-circle"></i> Ferrari Approved Pre-Owned</li>
+                    </ul>
+                    <button class="btn btn-ferrari">Join The Family</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-brand">
+                        <h3>
+                            <div class="prancing-horse" style="width: 40px; height: 40px; font-size: 1.5rem;">🐎</div>
+                            FERRARI
+                        </h3>
+                        <p class="footer-text">
+                            Since 1947, Ferrari has been synonymous with passion, excellence, and performance. 
+                            Born in Maranello, Italy, we continue to push the boundaries of automotive innovation 
+                            while staying true to Enzo Ferrari's original vision.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Models</h5>
+                    <a href="#" class="footer-link">SF90 Stradale</a>
+                    <a href="#" class="footer-link">296 GTB</a>
+                    <a href="#" class="footer-link">812 Superfast</a>
+                    <a href="#" class="footer-link">Roma</a>
+                    <a href="#" class="footer-link">Purosangue</a>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Racing</h5>
+                    <a href="#" class="footer-link">Scuderia Ferrari</a>
+                    <a href="#" class="footer-link">F1 News</a>
+                    <a href="#" class="footer-link">Corse Clienti</a>
+                    <a href="#" class="footer-link">Ferrari Challenge</a>
+                    <a href="#" class="footer-link">Esports</a>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Ownership</h5>
+                    <a href="#" class="footer-link">Tailor Made</a>
+                    <a href="#" class="footer-link">Approved</a>
+                    <a href="#" class="footer-link">Classiche</a>
+                    <a href="#" class="footer-link">Services</a>
+                    <a href="#" class="footer-link">Store</a>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Company</h5>
+                    <a href="#" class="footer-link">About Ferrari</a>
+                    <a href="#" class="footer-link">Museum</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Media Center</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ferrari S.p.A. - All rights reserved. | Privacy Policy | Cookie Policy | Legal Notice | Accessibility</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
