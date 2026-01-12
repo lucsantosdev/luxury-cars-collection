@@ -3,46 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-        .content {
-            text-align: center;
-        }
-        .title {
-            color: #363636;
-        }
-        .subtitle {
-            color: #4a4a4a;
-        }
-        .icon {
-            margin-bottom: 20px;
-            color: #3273dc;
-        }
-        .button {
-            margin-top: 20px;
-        }
-    </style>
+    <title>Lamborghini - Expect The Unexpected</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@300;400;500;600;700;800;900&family=Saira+Condensed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
-    <section class="section">
-        <div class="container content">
-            <span class="icon">
-                <i class="fas fa-tools fa-3x"></i>
-            </span>
-            <h1 class="title">Under Construction</h1>
-            <p class="subtitle">Sit and grab a coffee. I'm still building this page for you.</p>
-            <p>Check back soon to explore this amazing page about Lamborghini's cars!</p>
-            <a href="../../index.html"><button class="button is-link" onclick="history.back()">Go Back</button></a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="bull-logo">🐂</div>
+                LAMBORGHINI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#models">Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#heritage">Heritage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#performance">Technology</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-tagline">Expect The Unexpected</div>
+            <h1 class="hero-title">REVUELTO</h1>
+            <p class="hero-subtitle">The First V12 Hybrid Plug-in HPEV</p>
+            <p class="hero-description">
+                Unprecedented performance meets electrification. The new Revuelto delivers<br>
+                1015 CV from a naturally aspirated V12 engine combined with three electric motors.
+            </p>
+            <div>
+                <button class="btn btn-lambo">Discover Revuelto</button>
+                <button class="btn btn-lambo-outline">Configure</button>
+            </div>
         </div>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <!-- Featured Model - Huracán -->
+    <section class="model-showcase" id="models">
+        <img src="https://images.unsplash.com/photo-1621839673705-6617adf9e890?w=1920&h=1080&fit=crop" 
+             alt="Lamborghini Huracán" class="model-bg">
+        <div class="model-overlay">
+            <div class="model-label">Pure V10 Performance</div>
+            <h3 class="model-title">HURACÁN STO</h3>
+            <p class="model-desc">
+                Super Trofeo Omologata. The most extreme road-legal Huracán ever created,<br>
+                born from Lamborghini's racing DNA and Super Trofeo experience.
+            </p>
+            <div class="model-specs">
+                <div class="spec-item">
+                    <div class="spec-value">640</div>
+                    <div class="spec-label">CV</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-value">3.0s</div>
+                    <div class="spec-label">0-100 km/h</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-value">310</div>
+                    <div class="spec-label">km/h Top Speed</div>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-lambo">Explore Huracán</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urus Section -->
+    <section class="model-showcase">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop" 
+             alt="Lamborghini Urus" class="model-bg">
+        <div class="model-overlay">
+            <div class="model-label">Super SUV</div>
+            <h3 class="model-title">URUS S</h3>
+            <p class="model-desc">
+                The world's first Super Sport Utility Vehicle. Unmistakable Lamborghini design<br>
+                meets unparalleled versatility and everyday usability.
+            </p>
+            <div class="model-specs">
+                <div class="spec-item">
+                    <div class="spec-value">666</div>
+                    <div class="spec-label">CV</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-value">3.5s</div>
+                    <div class="spec-label">0-100 km/h</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-value">305</div>
+                    <div class="spec-label">km/h Top Speed</div>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-lambo">Explore Urus</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Models Grid -->
+    <section class="models-grid-section">
+        <div class="container">
+            <div class="section-header scroll-animation">
+                <div class="section-tag">Our Range</div>
+                <h2 class="section-title">Icons of Power</h2>
+                <p class="section-description">
+                    Every Lamborghini is a masterpiece of Italian design and engineering excellence. 
+                    From the legendary V12 to the revolutionary hybrid technology, experience the 
+                    ultimate expression of automotive passion.
+                </p>
+            </div>
+
+            <div class="models-grid">
+                <div class="model-card scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?w=1000&h=700&fit=crop" 
+                         alt="Lamborghini Aventador" class="model-card-img">
+                    <div class="model-card-content">
+                        <div class="model-card-label">The Legend</div>
+                        <h3 class="model-card-title">AVENTADOR</h3>
+                        <p class="model-card-desc">
+                            The iconic V12 flagship that redefined the supercar segment. Pure naturally 
+                            aspirated power and unmistakable design in its final form.
+                        </p>
+                        <a href="#" class="model-card-link">
+                            Discover Aventador <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="model-card scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=1000&h=700&fit=crop" 
+                         alt="Lamborghini Huracán Tecnica" class="model-card-img">
+                    <div class="model-card-content">
+                        <div class="model-card-label">Technical Excellence</div>
+                        <h3 class="model-card-title">HURACÁN TECNICA</h3>
+                        <p class="model-card-desc">
+                            The perfect balance between track performance and road usability. Advanced 
+                            aerodynamics and rear-wheel drive excitement.
+                        </p>
+                        <a href="#" class="model-card-link">
+                            Discover Tecnica <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="model-card scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1000&h=700&fit=crop" 
+                         alt="Lamborghini Urus Performante" class="model-card-img">
+                    <div class="model-card-content">
+                        <div class="model-card-label">Ultimate Performance SUV</div>
+                        <h3 class="model-card-title">URUS PERFORMANTE</h3>
+                        <p class="model-card-desc">
+                            The most extreme iteration of the Super SUV. Enhanced dynamics, reduced weight, 
+                            and track-focused performance in an SUV package.
+                        </p>
+                        <a href="#" class="model-card-link">
+                            Discover Performante <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="model-card scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1000&h=700&fit=crop" 
+                         alt="Lamborghini Huracán EVO" class="model-card-img">
+                    <div class="model-card-content">
+                        <div class="model-card-label">Evolution Perfected</div>
+                        <h3 class="model-card-title">HURACÁN EVO</h3>
+                        <p class="model-card-desc">
+                            The naturally aspirated V10 at its finest. Innovative technology and 
+                            Lamborghini Dinamica Veicolo Integrata for complete driving control.
+                        </p>
+                        <a href="#" class="model-card-link">
+                            Discover EVO <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Italian Heritage -->
+    <section class="heritage-section" id="heritage">
+        <div class="heritage-bg"></div>
+        <div class="container heritage-content">
+            <div class="heritage-grid">
+                <div class="heritage-text scroll-animation">
+                    <h2>Born in <span class="highlight">Sant'Agata Bolognese</span></h2>
+                    <p>
+                        Since 1963, Automobili Lamborghini has been creating dreams. Founded by 
+                        Ferruccio Lamborghini with the vision to build the perfect grand touring 
+                        car, we've become synonymous with extreme performance and Italian passion.
+                    </p>
+                    <p>
+                        Every Lamborghini is handcrafted in Sant'Agata Bolognese, Italy, where 
+                        tradition meets innovation. Our commitment to pushing boundaries has created 
+                        some of the most iconic supercars in automotive history.
+                    </p>
+                    <div class="heritage-quote">
+                        "I want to build a perfect car - a grand touring car that's faster, more 
+                        beautiful, and better than anything Ferrari has ever made."
+                        <br>— Ferruccio Lamborghini
+                    </div>
+                    <button class="btn btn-lambo">Our Heritage</button>
+
+                    <div class="heritage-stats">
+                        <div class="stat-box">
+                            <div class="stat-number">60+</div>
+                            <div class="stat-label">Years Legacy</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">1963</div>
+                            <div class="stat-label">Founded</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Made in Italy</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1000&h=800&fit=crop" 
+                         alt="Lamborghini Heritage" class="heritage-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Technology -->
+    <section class="performance-section" id="performance">
+        <div class="container">
+            <div class="section-header scroll-animation">
+                <div class="section-tag">Innovation</div>
+                <h2 class="section-title">Technology Born from Passion</h2>
+                <p class="section-description">
+                    Every Lamborghini incorporates cutting-edge technology developed through decades 
+                    of motorsport experience and relentless pursuit of performance perfection.
+                </p>
+            </div>
+
+            <div class="performance-grid">
+                <div class="performance-card scroll-animation">
+                    <div class="performance-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3 class="performance-title">V12 POWER</h3>
+                    <p class="performance-text">
+                        The legendary naturally aspirated V12 engine delivers an unmistakable 
+                        symphony and instant throttle response that defines the Lamborghini experience.
+                    </p>
+                </div>
+
+                <div class="performance-card scroll-animation">
+                    <div class="performance-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="performance-title">HYBRID TECHNOLOGY</h3>
+                    <p class="performance-text">
+                        Revolutionary plug-in hybrid systems combine V12 power with electric motors 
+                        for unprecedented performance and efficiency.
+                    </p>
+                </div>
+
+                <div class="performance-card scroll-animation">
+                    <div class="performance-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3 class="performance-title">AERODYNAMICS</h3>
+                    <p class="performance-text">
+                        Active aerodynamic systems adapt in real-time, optimizing downforce and 
+                        drag for maximum performance in every driving condition.
+                    </p>
+                </div>
+
+                <div class="performance-card scroll-animation">
+                    <div class="performance-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3 class="performance-title">CARBON FIBER</h3>
+                    <p class="performance-text">
+                        Extensive use of carbon fiber monocoque construction delivers exceptional 
+                        rigidity while minimizing weight for optimal power-to-weight ratio.
+                    </p>
+                </div>
+
+                <div class="performance-card scroll-animation">
+                    <div class="performance-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="performance-title">4-WHEEL DRIVE</h3>
+                    <p class="performance-text">
+                        Advanced all-wheel drive systems with active torque vectoring deliver 
+                        incredible traction and handling dynamics.
+                    </p>
+                </div>
+
+                <div class="performance-card scroll-animation">
+                    <div class="performance-icon">
+                        <i class="fas fa-gauge-high"></i>
+                    </div>
+                    <h3 class="performance-title">LDVI SYSTEM</h3>
+                    <p class="performance-text">
+                        Lamborghini Dinamica Veicolo Integrata controls every vehicle system in 
+                        real-time for predictive and intuitive driving dynamics.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section" id="experience">
+        <div class="experience-hero">
+            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=1920&h=1080&fit=crop" 
+                 alt="Lamborghini Experience" class="experience-bg">
+            <div class="experience-overlay">
+                <div class="experience-content scroll-animation">
+                    <h2>The <span class="highlight">Lamborghini</span><br>Experience</h2>
+                    <p>
+                        Owning a Lamborghini means joining an exclusive community of passionate 
+                        enthusiasts. From Ad Personam customization to exclusive track events and 
+                        concierge services, we offer our clients unparalleled access to the brand.
+                    </p>
+                    <ul class="experience-features">
+                        <li><i class="fas fa-palette"></i> Ad Personam Customization</li>
+                        <li><i class="fas fa-flag-checkered"></i> Esperienza Racing Program</li>
+                        <li><i class="fas fa-users"></i> Lamborghini Lounge Access</li>
+                        <li><i class="fas fa-plane"></i> Exclusive Events & Rallies</li>
+                        <li><i class="fas fa-tools"></i> Certified Service Network</li>
+                        <li><i class="fas fa-shield-alt"></i> Collezione Automobili Program</li>
+                    </ul>
+                    <button class="btn btn-lambo">Join the Family</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-brand">
+                        <h3>
+                            <div class="bull-logo" style="width: 45px; height: 45px; font-size: 1.3rem;">🐂</div>
+                            LAMBORGHINI
+                        </h3>
+                        <p class="footer-text">
+                            Since 1963, Automobili Lamborghini has been creating the most desirable 
+                            super sports cars in the world. Handcrafted in Sant'Agata Bolognese, Italy, 
+                            every Lamborghini is a unique masterpiece of Italian design and engineering.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Models</h5>
+                    <a href="#" class="footer-link">Revuelto</a>
+                    <a href="#" class="footer-link">Huracán</a>
+                    <a href="#" class="footer-link">Urus</a>
+                    <a href="#" class="footer-link">Aventador</a>
+                    <a href="#" class="footer-link">Concept Cars</a>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Shopping</h5>
+                    <a href="#" class="footer-link">Build & Price</a>
+                    <a href="#" class="footer-link">Find a Dealer</a>
+                    <a href="#" class="footer-link">Book Test Drive</a>
+                    <a href="#" class="footer-link">Pre-Owned</a>
+                    <a href="#" class="footer-link">Finance Options</a>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Ownership</h5>
+                    <a href="#" class="footer-link">Ad Personam</a>
+                    <a href="#" class="footer-link">Esperienza</a>
+                    <a href="#" class="footer-link">Service & Parts</a>
+                    <a href="#" class="footer-link">Collezione</a>
+                    <a href="#" class="footer-link">Warranty</a>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Company</h5>
+                    <a href="#" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">Motorsport</a>
+                    <a href="#" class="footer-link">Museum</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">News</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Automobili Lamborghini S.p.A. All rights reserved. | Privacy | Legal | Cookie Policy | Accessibility</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    
 </body>
 </html>
