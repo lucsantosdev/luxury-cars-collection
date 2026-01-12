@@ -3,46 +3,324 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-        .content {
-            text-align: center;
-        }
-        .title {
-            color: #363636;
-        }
-        .subtitle {
-            color: #4a4a4a;
-        }
-        .icon {
-            margin-bottom: 20px;
-            color: #3273dc;
-        }
-        .button {
-            margin-top: 20px;
-        }
-    </style>
+    <title>Tesla | Electric Cars, Solar & Clean Energy</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
 <body>
-    <section class="section">
-        <div class="container content">
-            <span class="icon">
-                <i class="fas fa-tools fa-3x"></i>
-            </span>
-            <h1 class="title">Under Construction</h1>
-            <p class="subtitle">Sit and grab a coffee. I'm still building this page for you.</p>
-            <p>Check back soon to explore this amazing page about Tesla's cars!</p>
-            <a href="../../index.html"><button class="button is-link" onclick="history.back()">Go Back</button></a>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="navbar-brand">TESLA</a>
+        <ul class="nav-menu">
+            <li><a href="#model-s" class="nav-link">Model S</a></li>
+            <li><a href="#model-3" class="nav-link">Model 3</a></li>
+            <li><a href="#model-x" class="nav-link">Model X</a></li>
+            <li><a href="#model-y" class="nav-link">Model Y</a></li>
+            <li><a href="#solar" class="nav-link">Solar</a></li>
+            <li><a href="#powerwall" class="nav-link">Powerwall</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="#" class="nav-link">Shop</a>
+            <a href="#" class="nav-link">Account</a>
+            <a href="#" class="nav-link">Menu</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Model S -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Model S</h1>
+            <p class="hero-subtitle">Plaid</p>
+            <div class="hero-cta">
+                <a href="#" class="btn-tesla">Order Now</a>
+                <a href="#" class="btn-tesla-outline">Demo Drive</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=1600&h=900&fit=crop" alt="Tesla Model S">
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down" style="color: var(--text-gray);"></i>
         </div>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <!-- Model 3 Section -->
+    <section class="model-section" id="model-3" style="background-image: url('https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=1920&h=1080&fit=crop'); background-color: rgba(255, 255, 255, 0.9); background-blend-mode: lighten;">
+        <div class="model-content">
+            <h2 class="model-title">Model 3</h2>
+            <p class="model-subtitle">Starting at $40,380 <a href="#">After Federal Tax Credit</a></p>
+            <div class="model-specs">
+                <div class="spec-item">
+                    <div class="spec-value">3.1s</div>
+                    <div class="spec-label">0-60 mph</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-value">358 mi</div>
+                    <div class="spec-label">Range (EPA est.)</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-value">AWD</div>
+                    <div class="spec-label">Dual Motor</div>
+                </div>
+            </div>
+        </div>
+        <div class="model-cta">
+            <a href="#" class="btn-tesla">Order Now</a>
+            <a href="#" class="btn-tesla-outline">Demo Drive</a>
+        </div>
+    </section>
+
+    <!-- Model X Section -->
+    <section class="model-section dark" id="model-x" style="background-image: url('https://images.unsplash.com/photo-1617788138017-80ad40651399?w=1920&h=1080&fit=crop'); background-blend-mode: darken;">
+        <div class="model-content">
+            <h2 class="model-title">Model X</h2>
+            <p class="model-subtitle">Plaid</p>
+            <div class="model-specs">
+                <div class="spec-item">
+                    <div class="spec-value">2.5s</div>
+                    <div class="spec-label">0-60 mph</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-value">333 mi</div>
+                    <div class="spec-label">Range (EPA est.)</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-value">1,020 hp</div>
+                    <div class="spec-label">Peak Power</div>
+                </div>
+            </div>
+        </div>
+        <div class="model-cta">
+            <a href="#" class="btn-tesla">Order Now</a>
+            <a href="#" class="btn-tesla-outline">Demo Drive</a>
+        </div>
+    </section>
+
+    <!-- Model Y Section -->
+    <section class="model-section" id="model-y" style="background-image: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1920&h=1080&fit=crop'); background-color: rgba(255, 255, 255, 0.9); background-blend-mode: lighten;">
+        <div class="model-content">
+            <h2 class="model-title">Model Y</h2>
+            <p class="model-subtitle">Starting at $43,990 <a href="#">After Federal Tax Credit</a></p>
+            <div class="model-specs">
+                <div class="spec-item">
+                    <div class="spec-value">4.8s</div>
+                    <div class="spec-label">0-60 mph</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-value">330 mi</div>
+                    <div class="spec-label">Range (EPA est.)</div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-value">AWD</div>
+                    <div class="spec-label">Dual Motor</div>
+                </div>
+            </div>
+        </div>
+        <div class="model-cta">
+            <a href="#" class="btn-tesla">Order Now</a>
+            <a href="#" class="btn-tesla-outline">Demo Drive</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-header">
+            <h2 class="features-title">Why Tesla</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+                <h3 class="feature-title">Safety</h3>
+                <p class="feature-text">
+                    Built for safety from the ground up. Every Tesla is engineered to achieve the highest safety ratings.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-gauge-high"></i>
+                </div>
+                <h3 class="feature-title">Performance</h3>
+                <p class="feature-text">
+                    Incredible acceleration and handling. Dual motor all-wheel drive with instant torque.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3 class="feature-title">Autopilot</h3>
+                <p class="feature-text">
+                    Advanced driver assistance features designed to help you navigate highways and city streets.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-battery-full"></i>
+                </div>
+                <h3 class="feature-title">Range</h3>
+                <p class="feature-text">
+                    Go anywhere with up to 405 miles of estimated range on a single charge.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-charging-station"></i>
+                </div>
+                <h3 class="feature-title">Supercharging</h3>
+                <p class="feature-text">
+                    40,000+ Superchargers globally. Charge at home or on the road with access to the world's largest charging network.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-screen"></i>
+                </div>
+                <h3 class="feature-title">App</h3>
+                <p class="feature-text">
+                    Stay connected to your vehicle with the Tesla app. Control and monitor your car from anywhere.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">405</div>
+                <div class="stat-label">Miles Range</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1.99s</div>
+                <div class="stat-label">0-60 mph</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">40k+</div>
+                <div class="stat-label">Superchargers</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5★</div>
+                <div class="stat-label">Safety Rating</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solar Section -->
+    <section class="solar-section" id="solar">
+        <div class="solar-grid">
+            <div class="solar-content">
+                <h2>Solar for New Roofs</h2>
+                <p>
+                    Solar Roof is the only roof that can help pay for itself with the energy you produce. 
+                    Power your home at the lowest price per watt of any national provider and take control 
+                    of your monthly electricity bill.
+                </p>
+                <p>
+                    Transform your roof with Solar Roof tiles and Powerwall for energy storage. With Tesla's 
+                    fully integrated home energy ecosystem, you can generate, store, and manage clean energy 
+                    all in one place.
+                </p>
+                <a href="#" class="btn-tesla">Order Now</a>
+            </div>
+            <div class="solar-image">
+                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1000&h=700&fit=crop" alt="Solar Panels">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="sustainability-section">
+        <div class="sustainability-content">
+            <h2>Accelerating the World's Transition to Sustainable Energy</h2>
+            <p>
+                Tesla's mission is to accelerate the world's transition to sustainable energy. We design and 
+                manufacture electric vehicles, battery energy storage systems, solar panels and solar roof tiles, 
+                and related products and services.
+            </p>
+            <p>
+                Since our founding in 2003, we've worked to create the most compelling car company of the 21st 
+                century by driving the world's transition to electric vehicles. Today, Tesla builds not only 
+                all-electric vehicles but also infinitely scalable clean energy generation and storage products.
+            </p>
+            <a href="#" class="btn-tesla">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Vehicles</h4>
+                    <a href="#" class="footer-link">Model S</a>
+                    <a href="#" class="footer-link">Model 3</a>
+                    <a href="#" class="footer-link">Model X</a>
+                    <a href="#" class="footer-link">Model Y</a>
+                    <a href="#" class="footer-link">Cybertruck</a>
+                    <a href="#" class="footer-link">Compare</a>
+                    <a href="#" class="footer-link">Inventory</a>
+                    <a href="#" class="footer-link">Used Cars</a>
+                    <a href="#" class="footer-link">Demo Drive</a>
+                    <a href="#" class="footer-link">Trade-In</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Energy</h4>
+                    <a href="#" class="footer-link">Solar Panels</a>
+                    <a href="#" class="footer-link">Solar Roof</a>
+                    <a href="#" class="footer-link">Powerwall</a>
+                    <a href="#" class="footer-link">Megapack</a>
+                    <a href="#" class="footer-link">Commercial</a>
+                    <a href="#" class="footer-link">Utilities</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Charging</h4>
+                    <a href="#" class="footer-link">Charging Calculator</a>
+                    <a href="#" class="footer-link">Trip Planner</a>
+                    <a href="#" class="footer-link">Supercharger Map</a>
+                    <a href="#" class="footer-link">Home Charging</a>
+                    <a href="#" class="footer-link">Destination Charging</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Discover</h4>
+                    <a href="#" class="footer-link">Support</a>
+                    <a href="#" class="footer-link">Investor Relations</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">News</a>
+                    <a href="#" class="footer-link">Shop</a>
+                    <a href="#" class="footer-link">Account</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    Tesla © 2026
+                </div>
+                <div class="footer-bottom-right">
+                    <a href="#" class="footer-bottom-link">Privacy & Legal</a>
+                    <a href="#" class="footer-bottom-link">Contact</a>
+                    <a href="#" class="footer-bottom-link">Careers</a>
+                    <a href="#" class="footer-bottom-link">News</a>
+                    <a href="#" class="footer-bottom-link">Engage</a>
+                    <a href="#" class="footer-bottom-link">Locations</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+
 </body>
 </html>
