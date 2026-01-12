@@ -3,46 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f5f5f5;
-        }
-        .content {
-            text-align: center;
-        }
-        .title {
-            color: #363636;
-        }
-        .subtitle {
-            color: #4a4a4a;
-        }
-        .icon {
-            margin-bottom: 20px;
-            color: #3273dc;
-        }
-        .button {
-            margin-top: 20px;
-        }
-    </style>
+    <title>Audi - Vorsprung durch Technik</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <section class="section">
-        <div class="container content">
-            <span class="icon">
-                <i class="fas fa-tools fa-3x"></i>
-            </span>
-            <h1 class="title">Under Construction</h1>
-            <p class="subtitle">Sit and grab a coffee. I'm still building this page for you.</p>
-            <p>Check back soon to explore this amazing page about Audi's cars!</p>
-            <a href="../../index.html"><button class="button is-link" onclick="history.back()">Go Back</button></a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="audi-rings">◯◯◯◯</span> AUDI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#models">Models</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#electric">Electric</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#innovation">Innovation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">FUTURE IS AN ATTITUDE</h1>
+            <p class="hero-tagline">Vorsprung durch Technik</p>
+            <p class="hero-subtitle">Progress Through Technology - Discover the Next Generation of Mobility</p>
+            <div class="hero-buttons">
+                <button class="btn btn-audi">Explore Models</button>
+                <button class="btn btn-audi-outline">Configure Your Audi</button>
+            </div>
         </div>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <!-- Models Section -->
+    <section class="models-section" id="models">
+        <div class="container">
+            <div class="section-header scroll-animation">
+                <div class="section-label">Our Lineup</div>
+                <h2 class="section-title">Designed for Progress</h2>
+                <p class="section-description">
+                    Experience cutting-edge technology and uncompromising performance across our complete range of vehicles.
+                </p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 scroll-animation">
+                    <div class="model-card">
+                        <img src="https://images.unsplash.com/photo-1610768764270-790fbec18178?w=800&h=600&fit=crop" 
+                             alt="Audi e-tron GT" class="model-card-img">
+                        <div class="model-card-content">
+                            <span class="model-badge">Electric</span>
+                            <h3 class="model-name">e-tron GT</h3>
+                            <p class="model-desc">
+                                Pure electric performance meets iconic design. Zero emissions, unlimited emotions.
+                            </p>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <div class="spec-value">637</div>
+                                    <div class="spec-label">HP</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-value">3.1s</div>
+                                    <div class="spec-label">0-60 MPH</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-value">238</div>
+                                    <div class="spec-label">Range (mi)</div>
+                                </div>
+                            </div>
+                            <a href="#" class="model-link">Explore e-tron GT <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 scroll-animation">
+                    <div class="model-card">
+                        <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop" 
+                             alt="Audi R8" class="model-card-img">
+                        <div class="model-card-content">
+                            <span class="model-badge">Performance</span>
+                            <h3 class="model-name">R8</h3>
+                            <p class="model-desc">
+                                A supercar that embodies the pinnacle of Audi engineering and motorsport heritage.
+                            </p>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <div class="spec-value">602</div>
+                                    <div class="spec-label">HP</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-value">3.2s</div>
+                                    <div class="spec-label">0-60 MPH</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-value">205</div>
+                                    <div class="spec-label">Top Speed</div>
+                                </div>
+                            </div>
+                            <a href="#" class="model-link">Explore R8 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 scroll-animation">
+                    <div class="model-card">
+                        <img src="https://images.unsplash.com/photo-1617531653520-bd466e4f2c5e?w=800&h=600&fit=crop" 
+                             alt="Audi Q8" class="model-card-img">
+                        <div class="model-card-content">
+                            <span class="model-badge">SUV</span>
+                            <h3 class="model-name">Q8</h3>
+                            <p class="model-desc">
+                                The flagship SUV combines boldness, luxury, and cutting-edge technology.
+                            </p>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <div class="spec-value">335</div>
+                                    <div class="spec-label">HP</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-value">5.6s</div>
+                                    <div class="spec-label">0-60 MPH</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-value">130</div>
+                                    <div class="spec-label">Top Speed</div>
+                                </div>
+                            </div>
+                            <a href="#" class="model-link">Explore Q8 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 scroll-animation">
+                    <div class="model-card">
+                        <img src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?w=800&h=600&fit=crop" 
+                             alt="Audi A8" class="model-card-img">
+                        <div class="model-card-content">
+                            <span class="model-badge">Luxury</span>
+                            <h3 class="model-name">A8</h3>
+                            <p class="model-desc">
+                                The luxury sedan that redefines comfort with innovative technology and elegant design.
+                            </p>
+                            <div class="model-specs">
+                                <div class="spec-item">
+                                    <div class="spec-value">453</div>
+                                    <div class="spec-label">HP</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-value">4.4s</div>
+                                    <div class="spec-label">0-60 MPH</div>
+                                </div>
+                                <div class="spec-item">
+                                    <div class="spec-value">155</div>
+                                    <div class="spec-label">Top Speed</div>
+                                </div>
+                            </div>
+                            <a href="#" class="model-link">Explore A8 <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-6 scroll-animation">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="stat-number">637</div>
+                        <div class="stat-label">Horsepower</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 scroll-animation">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Electric Power</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 scroll-animation">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-gauge-high"></i>
+                        </div>
+                        <div class="stat-number">3.1s</div>
+                        <div class="stat-label">0-60 MPH</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 scroll-animation">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <div class="stat-number">238</div>
+                        <div class="stat-label">Miles Range</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Section -->
+    <section class="innovation-section" id="innovation">
+        <div class="container">
+            <div class="row innovation-content">
+                <div class="col-md-6 scroll-animation">
+                    <div class="innovation-text">
+                        <h2>Innovation That <span class="highlight">Moves You Forward</span></h2>
+                        <p>
+                            At Audi, we believe in progress through technology. Every innovation we develop is designed 
+                            to enhance your driving experience, improve safety, and create a more sustainable future.
+                        </p>
+                        <ul class="innovation-features">
+                            <li><i class="fas fa-check-circle"></i> Quattro All-Wheel Drive Technology</li>
+                            <li><i class="fas fa-check-circle"></i> Virtual Cockpit Digital Display</li>
+                            <li><i class="fas fa-check-circle"></i> Matrix LED Headlights</li>
+                            <li><i class="fas fa-check-circle"></i> Advanced Driver Assistance Systems</li>
+                            <li><i class="fas fa-check-circle"></i> MMI Touch Response Interface</li>
+                        </ul>
+                        <button class="btn btn-audi">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-md-6 scroll-animation">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop" 
+                         alt="Innovation" class="innovation-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Electric Section -->
+    <section class="electric-section" id="electric">
+        <div class="electric-bg"></div>
+        <div class="container">
+            <div class="electric-content scroll-animation">
+                <h2>The Future is Electric</h2>
+                <p>
+                    Experience the next generation of mobility with Audi's electric lineup. Combining sustainable 
+                    technology with uncompromising performance, our e-tron models are redefining what it means 
+                    to drive an electric vehicle.
+                </p>
+                <button class="btn btn-audi">Discover e-tron</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4 class="footer-title">
+                        <span class="audi-rings">◯◯◯◯</span> AUDI
+                    </h4>
+                    <p style="color: #cccccc; line-height: 1.8; margin-bottom: 1.5rem;">
+                        Vorsprung durch Technik - Progress through technology. Setting standards in automotive 
+                        innovation since 1909.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Models</h5>
+                    <a href="#" class="footer-link">e-tron GT</a>
+                    <a href="#" class="footer-link">R8</a>
+                    <a href="#" class="footer-link">Q8</a>
+                    <a href="#" class="footer-link">A8</a>
+                    <a href="#" class="footer-link">View All</a>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Electric</h5>
+                    <a href="#" class="footer-link">e-tron Models</a>
+                    <a href="#" class="footer-link">Charging</a>
+                    <a href="#" class="footer-link">Technology</a>
+                    <a href="#" class="footer-link">Sustainability</a>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Shopping</h5>
+                    <a href="#" class="footer-link">Build Your Audi</a>
+                    <a href="#" class="footer-link">Find a Dealer</a>
+                    <a href="#" class="footer-link">Offers</a>
+                    <a href="#" class="footer-link">Finance</a>
+                </div>
+                <div class="col-md-2">
+                    <h5 class="footer-title">Support</h5>
+                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Owners</a>
+                    <a href="#" class="footer-link">FAQs</a>
+                    <a href="#" class="footer-link">Careers</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Audi AG. All rights reserved. | Privacy Policy | Terms of Use | Cookie Settings</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
