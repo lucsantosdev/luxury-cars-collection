@@ -102,7 +102,7 @@ ul {
     color: var(--primary-color);
     border-color: var(--primary-color);
 }
-/* BRANDS LINE SEPARATOR STYLES */
+/* BRAND LINE SEPARATOR STYLES */
 .line__container {
     padding-block: 5rem;
     overflow: hidden;
