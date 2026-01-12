@@ -1,0 +1,738 @@
+:root {
+    --maserati-blue: #0057A8;
+    --maserati-dark-blue: #003d7a;
+    --maserati-light-blue: #2b7bc4;
+    --maserati-navy: #001f3f;
+    --maserati-white: #ffffff;
+    --maserati-cream: #faf8f5;
+    --maserati-gray: #f2f2f2;
+    --maserati-dark: #1a1a1a;
+    --text-dark: #2c2c2c;
+    --text-gray: #707070;
+    --accent-gold: #c8a882;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--maserati-white);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 0.8rem 0;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--maserati-dark) !important;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.trident-logo {
+    font-size: 2rem;
+    color: var(--maserati-blue);
+}
+
+.nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0 1.2rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.nav-link:hover {
+    color: var(--maserati-blue) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--maserati-cream) 0%, var(--maserati-white) 100%);
+    overflow: hidden;
+}
+
+.hero-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    background-image: repeating-linear-gradient(
+        45deg,
+        var(--maserati-blue) 0px,
+        var(--maserati-blue) 1px,
+        transparent 1px,
+        transparent 20px
+    ),
+    repeating-linear-gradient(
+        -45deg,
+        var(--maserati-blue) 0px,
+        var(--maserati-blue) 1px,
+        transparent 1px,
+        transparent 20px
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+    max-width: 1100px;
+    padding: 2rem;
+}
+
+.hero-trident {
+    font-size: 4rem;
+    color: var(--maserati-blue);
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    color: var(--maserati-dark);
+}
+
+.hero-tagline {
+    font-size: 1.8rem;
+    color: var(--maserati-blue);
+    margin-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 3rem;
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-maserati {
+    padding: 1.2rem 3.5rem;
+    background-color: var(--maserati-blue);
+    border: none;
+    color: var(--maserati-white);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+}
+
+.btn-maserati:hover {
+    background-color: var(--maserati-dark-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 87, 168, 0.3);
+    color: var(--maserati-white);
+}
+
+.btn-maserati-outline {
+    padding: 1.2rem 3.5rem;
+    background-color: transparent;
+    border: 2px solid var(--maserati-dark);
+    color: var(--maserati-dark);
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+}
+
+.btn-maserati-outline:hover {
+    background-color: var(--maserati-dark);
+    color: var(--maserati-white);
+    transform: translateY(-3px);
+}
+
+/* Models Section */
+.models-section {
+    padding: 8rem 0;
+    background-color: var(--maserati-white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-label {
+    color: var(--maserati-blue);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--maserati-dark);
+}
+
+.section-description {
+    color: var(--text-gray);
+    font-size: 1.2rem;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.model-showcase {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.model-showcase-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.model-showcase:hover .model-showcase-img {
+    transform: scale(1.03);
+}
+
+.model-showcase-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+    padding: 4rem;
+    color: var(--maserati-white);
+}
+
+.model-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--maserati-blue);
+    color: var(--maserati-white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.model-name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.model-tagline {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.model-specs {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.spec-item {
+    text-align: left;
+}
+
+.spec-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--maserati-white);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.spec-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.model-link {
+    color: var(--maserati-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.model-link:hover {
+    color: var(--maserati-light-blue);
+    gap: 1.2rem;
+}
+
+/* Grid Models */
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.model-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--maserati-gray);
+}
+
+.model-card-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.model-card:hover .model-card-img {
+    transform: scale(1.08);
+}
+
+.model-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 100%);
+    padding: 3rem;
+    color: var(--maserati-white);
+}
+
+.model-card-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.model-card-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
+}
+
+/* Heritage Section */
+.heritage-section {
+    padding: 8rem 0;
+    background: linear-gradient(135deg, var(--maserati-navy) 0%, var(--maserati-dark-blue) 100%);
+    color: var(--maserati-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.heritage-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    background-image: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><path d="M30 0 L30 60 M0 30 L60 30" stroke="white" stroke-width="1"/></svg>');
+}
+
+.heritage-content {
+    position: relative;
+    z-index: 2;
+}
+
+.heritage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.heritage-text h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.heritage-text .highlight {
+    color: var(--maserati-light-blue);
+    font-style: italic;
+}
+
+.heritage-text p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.9;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.heritage-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.heritage-stat {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s ease;
+}
+
+.heritage-stat:hover {
+    background-color: rgba(0, 87, 168, 0.2);
+    border-color: var(--maserati-blue);
+    transform: translateY(-5px);
+}
+
+.heritage-stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--maserati-light-blue);
+    margin-bottom: 0.5rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.heritage-stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.heritage-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+/* Craftsmanship Section */
+.craftsmanship-section {
+    padding: 8rem 0;
+    background-color: var(--maserati-cream);
+}
+
+.craftsmanship-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.craftsmanship-img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.craftsmanship-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: var(--maserati-dark);
+}
+
+.craftsmanship-text p {
+    font-size: 1.15rem;
+    color: var(--text-gray);
+    line-height: 1.9;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.craftsmanship-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.craftsmanship-features li {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-dark);
+}
+
+.craftsmanship-features li i {
+    color: var(--maserati-blue);
+    margin-right: 1.2rem;
+    font-size: 1.2rem;
+}
+
+/* Innovation Section */
+.innovation-section {
+    padding: 8rem 0;
+    background-color: var(--maserati-white);
+}
+
+.innovation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.innovation-card {
+    background-color: var(--maserati-gray);
+    padding: 3rem;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.innovation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background-color: var(--maserati-blue);
+    transition: height 0.4s ease;
+}
+
+.innovation-card:hover::before {
+    height: 100%;
+}
+
+.innovation-card:hover {
+    background-color: var(--maserati-white);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+}
+
+.innovation-icon {
+    font-size: 3rem;
+    color: var(--maserati-blue);
+    margin-bottom: 2rem;
+}
+
+.innovation-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--maserati-dark);
+}
+
+.innovation-text {
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--maserati-dark);
+    padding: 5rem 0 2rem;
+    color: var(--maserati-white);
+}
+
+.footer-brand h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.9;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.footer-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--maserati-white);
+    font-weight: 600;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+.footer-link:hover {
+    color: var(--maserati-light-blue);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--maserati-white);
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.social-link:hover {
+    background-color: var(--maserati-blue);
+    border-color: var(--maserati-blue);
+    color: var(--maserati-white);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    padding-top: 3rem;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.9s ease;
+}
+
+.scroll-animation.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .models-grid,
+    .heritage-grid,
+    .craftsmanship-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .innovation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .model-name {
+        font-size: 2.5rem;
+    }
+
+    .heritage-text h2 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-tagline {
+        font-size: 1.3rem;
+    }
+
+    .btn-maserati,
+    .btn-maserati-outline {
+        display: block;
+        margin: 0.5rem auto;
+    }
+
+    .model-specs {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .heritage-stats {
+        grid-template-columns: 1fr;
+    }
+}
