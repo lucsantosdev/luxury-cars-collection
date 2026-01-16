@@ -3,100 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Cars List | By @lucsantosdev</title>
+    <meta name="description" content="Explore the world's most prestigious luxury car brands. Discover Aston Martin, Ferrari, Lamborghini, McLaren, Porsche, and more. Your gateway to automotive excellence.">
+    <meta name="keywords" content="luxury cars, supercars, exotic cars, Aston Martin, Ferrari, Lamborghini, McLaren, Porsche, Mercedes-Benz, BMW, Audi, Tesla, Maserati">
+    <meta name="author" content="@lucsantosdev">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Luxury Cars Collection - Explore Premium Automotive Excellence">
+    <meta property="og:description" content="Discover the world's most prestigious luxury car brands and their iconic heritage.">
+    <meta property="og:url" content="https://luxury-cars-collection.com">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Luxury Cars Collection - Explore Premium Automotive Excellence">
+    <meta property="twitter:description" content="Discover the world's most prestigious luxury car brands and their iconic heritage.">
+    
+    <title>Luxury Cars Collection | Explore Premium Automotive Excellence</title>
     <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png"> <!-- Luxury icons created by Nsit - Flaticon (https://www.flaticon.com/free-icons/luxury) -->
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav__container">
+            <a href="#home" class="nav__logo">
+                <span>LUXURY CARS</span>
+            </a>
+            <div class="nav__links">
+                <a href="#home">Home</a>
+                <a href="#collection">Collection</a>
+                <a href="#brands">Brands</a>
+                <a href="#footer">Contact</a>
+            </div>
+            <div class="nav__actions">
+                <div class="nav__language">
+                    <button class="language__toggle" id="languageToggle" aria-label="Change language">
+                        <i class="ri-global-line"></i>
+                        <span>EN</span>
+                    </button>
+                    <div class="language__dropdown" id="languageDropdown">
+                        <a href="index.html" class="language__option active">
+                            <span class="flag">🇺🇸</span>
+                            <span>English</span>
+                        </a>
+                        <a href="pt.html" class="language__option">
+                            <span class="flag">🇧🇷</span>
+                            <span>Português</span>
+                        </a>
+                        <a href="es.html" class="language__option">
+                            <span class="flag">🇪🇸</span>
+                            <span>Español</span>
+                        </a>
+                    </div>
+                </div>
+                <button class="nav__favorites" id="favoritesBtn" aria-label="View favorites">
+                    <i class="ri-heart-line"></i>
+                    <span class="favorites__count" id="favoritesCount">0</span>
+                </button>
+                <button class="nav__search" id="searchToggle" aria-label="Toggle search">
+                    <i class="ri-search-line"></i>
+                </button>
+                <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Search Bar -->
+        <div class="search__container" id="searchContainer">
+            <div class="search__wrapper">
+                <i class="ri-search-line"></i>
+                <input type="text" id="searchInput" placeholder="Search brands..." aria-label="Search luxury car brands">
+                <button class="search__close" id="searchClose" aria-label="Close search">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <div class="hero__text" data-aos="fade-up">
+                <h1 class="hero__title">
+                    <span class="hero__title-line">AUTOMOTIVE</span>
+                    <span class="hero__title-line hero__title-line--gold">EXCELLENCE</span>
+                </h1>
+                <p class="hero__subtitle">Explore the World's Most Prestigious Luxury Car Brands</p>
+                <a href="#collection" class="hero__cta">
+                    <span>Discover Collection</span>
+                    <i class="ri-arrow-down-line"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>Scroll</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats__section">
+        <div class="section__container stats__container">
+            <div class="stat__item" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="stat__number" data-target="10">0</h3>
+                <p class="stat__label">Luxury Brands</p>
+            </div>
+            <div class="stat__item" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="stat__number" data-target="113">0</h3>
+                <p class="stat__label">Years of Heritage</p>
+            </div>
+            <div class="stat__item" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="stat__number" data-target="1000">0</h3>
+                <p class="stat__label">+ Iconic Models</p>
+            </div>
+        </div>
+    </section>
+
     <!-- BRAND CAR LIST -->
-    <section class="section__container list__container" id="list">
-        <h2 class="section__title">CHOOSE YOUR DREAM CAR</h2>
+    <section class="section__container list__container" id="collection">
+        <h2 class="section__title" data-aos="fade-up">CHOOSE YOUR DREAM CAR</h2>
+        <div class="filter__container" data-aos="fade-up" data-aos-delay="100">
+            <button class="filter__btn active" data-filter="all">All Brands</button>
+            <button class="filter__btn" data-filter="british">British</button>
+            <button class="filter__btn" data-filter="german">German</button>
+            <button class="filter__btn" data-filter="italian">Italian</button>
+            <button class="filter__btn" data-filter="american">American</button>
+        </div>
         <div class="list__grid">
             <!-- BRAND LIST - ASTON MARTIN -->
-            <div class="list__card">
-                <img src="assets/img/aston-martin/list.jpg" alt="aston-martin">
+            <div class="list__card" data-brand="british" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/img/aston-martin/list.jpg" alt="Aston Martin luxury sports car" loading="lazy">
+                <button class="favorite__btn" data-brand="Aston Martin" aria-label="Add Aston Martin to favorites">
+                    <i class="ri-heart-line"></i>
+                </button>
                 <div class="list__brand">
                     <h4>ASTON MARTIN</h4>
-                    <a href="assets/under-dev-notice.html"><i class="ri-arrow-right-line"></i></a>
+                    <a href="assets/under-dev-notice.html" aria-label="Explore Aston Martin collection">
+                        <span>Explore</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
                 </div>
             </div>
             <!-- BRAND LIST - AUDI -->
-            <div class="list__card">
-                <img src="assets/img/audi/list.jpg" alt="audi">
+            <div class="list__card" data-brand="german" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/audi/list.jpg" alt="Audi luxury performance car" loading="lazy">
+                <button class="favorite__btn" data-brand="Audi" aria-label="Add Audi to favorites">
+                    <i class="ri-heart-line"></i>
+                </button>
                 <div class="list__brand">
                     <h4>AUDI</h4>
-                    <a href="assets/under-dev-notice.html"><i class="ri-arrow-right-line"></i></a>
+                    <a href="assets/under-dev-notice.html" aria-label="Explore Audi collection">
+                        <span>Explore</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
                 </div>
             </div>
             <!-- BRAND LIST - BMW -->
-            <div class="list__card">
-                <img src="assets/img/bmw/list.jpg" alt="bmw">
+            <div class="list__card" data-brand="german" data-aos="fade-up" data-aos-delay="300">
+                <img src="assets/img/bmw/list.jpg" alt="BMW ultimate driving machine" loading="lazy">
+                <button class="favorite__btn" data-brand="BMW" aria-label="Add BMW to favorites">
+                    <i class="ri-heart-line"></i>
+                </button>
                 <div class="list__brand">
                     <h4>BMW</h4>
-                    <a href="assets/under-dev-notice.html"><i class="ri-arrow-right-line"></i></a>
+                    <a href="assets/under-dev-notice.html" aria-label="Explore BMW collection">
+                        <span>Explore</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
                 </div>
             </div>
             <!-- BRAND LIST - FERRARI -->
-            <div class="list__card">
-                <img src="assets/img/ferrari/list.jpg" alt="ferrari">
+            <div class="list__card" data-brand="italian" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/img/ferrari/list.jpg" alt="Ferrari Italian excellence supercar" loading="lazy">
+                <button class="favorite__btn" data-brand="Ferrari" aria-label="Add Ferrari to favorites">
+                    <i class="ri-heart-line"></i>
+                </button>
                 <div class="list__brand">
                     <h4>FERRARI</h4>
-                    <a href="assets/under-dev-notice.html"><i class="ri-arrow-right-line"></i></a>
+                    <a href="assets/under-dev-notice.html" aria-label="Explore Ferrari collection">
+                        <span>Explore</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
                 </div>
             </div>
             <!-- BRAND LIST - LAMBORGHINI -->
-            <div class="list__card">
-                <img src="assets/img/lamborghini/list.jpeg" alt="lamborghini">
+            <div class="list__card" data-brand="italian" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/lamborghini/list.jpeg" alt="Lamborghini Italian supercar" loading="lazy">
+                <button class="favorite__btn" data-brand="Lamborghini" aria-label="Add Lamborghini to favorites">
+                    <i class="ri-heart-line"></i>
+                </button>
                 <div class="list__brand">
                     <h4>LAMBORGHINI</h4>
-                    <a href="assets/under-dev-notice.html"><i class="ri-arrow-right-line"></i></a>
+                    <a href="assets/under-dev-notice.html" aria-label="Explore Lamborghini collection">
+                        <span>Explore</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
                 </div>
             </div>
             <!-- BRAND LIST - MASERATI -->
-            <div class="list__card">
-                <img src="assets/img/maserati/list.jpg" alt="maserati">
+            <div class="list__card" data-brand="italian" data-aos="fade-up" data-aos-delay="300">
+                <img src="assets/img/maserati/list.jpg" alt="Maserati Italian luxury car" loading="lazy">
+                <button class="favorite__btn" data-brand="Maserati" aria-label="Add Maserati to favorites">
+                    <i class="ri-heart-line"></i>
+                </button>
                 <div class="list__brand">
                     <h4>MASERATI</h4>
-                    <a href="assets/under-dev-notice.html"><i class="ri-arrow-right-line"></i></a>
+                    <a href="assets/under-dev-notice.html" aria-label="Explore Maserati collection">
+                        <span>Explore</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
                 </div>
             </div>
             <!-- BRAND LIST - MCLAREN -->
-            <div class="list__card">
-                <img src="assets/img/mclaren/list.jpg" alt="mclaren">
+            <div class="list__card" data-brand="british" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/img/mclaren/list.jpg" alt="McLaren British supercar" loading="lazy">
+                <button class="favorite__btn" data-brand="McLaren" aria-label="Add McLaren to favorites">
+                    <i class="ri-heart-line"></i>
+                </button>
                 <div class="list__brand">
                     <h4>MCLAREN</h4>
-                    <a href="brands-car-list/mclaren/index.html"><i class="ri-arrow-right-line"></i></a>
+                    <a href="brands-car-list/mclaren/index.html" aria-label="Explore McLaren collection">
+                        <span>Explore</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
                 </div>
             </div>
             <!-- BRAND LIST - MERCEDES-BENZ -->
-            <div class="list__card">
-                <img src="assets/img/mercedes-benz/list.jpg" alt="mercedes-benz">
+            <div class="list__card" data-brand="german" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/mercedes-benz/list.jpg" alt="Mercedes-Benz German luxury car" loading="lazy">
+                <button class="favorite__btn" data-brand="Mercedes-Benz" aria-label="Add Mercedes-Benz to favorites">
+                    <i class="ri-heart-line"></i>
+                </button>
                 <div class="list__brand">
                     <h4>MERCEDES-BENZ</h4>
-                    <a href="assets/under-dev-notice.html"><i class="ri-arrow-right-line"></i></a>
+                    <a href="assets/under-dev-notice.html" aria-label="Explore Mercedes-Benz collection">
+                        <span>Explore</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
                 </div>
             </div>
             <!-- BRAND LIST - PORSCHE -->
-            <div class="list__card">
-                <img src="assets/img/porsche/list.jpg" alt="porsche">
+            <div class="list__card" data-brand="german" data-aos="fade-up" data-aos-delay="300">
+                <img src="assets/img/porsche/list.jpg" alt="Porsche German sports car" loading="lazy">
+                <button class="favorite__btn" data-brand="Porsche" aria-label="Add Porsche to favorites">
+                    <i class="ri-heart-line"></i>
+                </button>
                 <div class="list__brand">
                     <h4>PORSCHE</h4>
-                    <a href="assets/under-dev-notice.html"><i class="ri-arrow-right-line"></i></a>
+                    <a href="assets/under-dev-notice.html" aria-label="Explore Porsche collection">
+                        <span>Explore</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
                 </div>
             </div>
             <!-- BRAND LIST - TESLA -->
-            <div class="list__card">
-                <img src="assets/img/tesla/list.jpg" alt="tesla">
+            <div class="list__card" data-brand="american" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/img/tesla/list.jpg" alt="Tesla American electric luxury car" loading="lazy">
+                <button class="favorite__btn" data-brand="Tesla" aria-label="Add Tesla to favorites">
+                    <i class="ri-heart-line"></i>
+                </button>
                 <div class="list__brand">
                     <h4>TESLA</h4>
-                    <a href="assets/under-dev-notice.html/"><i class="ri-arrow-right-line"></i></a>
+                    <a href="assets/under-dev-notice.html" aria-label="Explore Tesla collection">
+                        <span>Explore</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
     <!-- BRAND SEPARATOR LINE -->
-    <section class="line__container">
+    <section class="line__container" id="brands" data-aos="fade-up">
         <div class="line__wrapper">
             <img src="assets/img/aston-martin/logo.svg" alt="aston-martin-logo">
             <img src="assets/img/audi/logo.png" alt="audi">
@@ -112,10 +296,10 @@
     </section>
     <!-- BRAND LINKS -->
     <section class="section__container link__container">
-        <h2 class="section__title">WHAT DRIVES US</h2>
+        <h2 class="section__title" data-aos="fade-up">WHAT DRIVES US</h2>
         <div class="link__grid">
             <!-- BRAND LINK - ASTON MARTIN -->
-            <div class="link__card">
+            <div class="link__card" data-aos="fade-up" data-aos-delay="100">
                 <div class="link__date">
                     <span>11</span>
                     <div>
@@ -128,7 +312,7 @@
                 <a href="https://www.astonmartin.com/en" target="_blank"><img src="assets/img/aston-martin/link.jpg" alt="aston-martin"></a>
             </div>
             <!-- BRAND LINK - AUDI -->
-            <div class="link__card">
+            <div class="link__card" data-aos="fade-up" data-aos-delay="200">
                 <div class="link__date">
                     <span>03</span>
                     <div>
@@ -141,7 +325,7 @@
                 <a href="https://www.audiusa.com/en/" target="_blank"><img src="assets/img/audi/link.jpg" alt="audi"></a>
             </div>
             <!-- BRAND LINK - BMW -->
-            <div class="link__card">
+            <div class="link__card" data-aos="fade-up" data-aos-delay="300">
                 <div class="link__date">
                     <span>07</span>
                     <div>
@@ -247,7 +431,7 @@
         </div>
     </section>
     <!-- FOOTER (PERSONAL INFO) -->
-    <footer>
+    <footer id="footer">
         <div class="section__container footer__container">
           <div class="footer__col">
             <h4>Follow Me</h4>  
@@ -271,6 +455,31 @@
           Copyright © 2026 <span><a href="https://github.com/lucsantosdev/luxury-cars-collection" target="_blank">@lucsantosdev</a></span>. All rights reserved.
         </div>
     </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- FAVORITES MODAL -->
+    <div class="favorites__modal" id="favoritesModal">
+        <div class="favorites__modal-content">
+            <div class="favorites__modal-header">
+                <h3>Your Favorites</h3>
+                <button class="favorites__modal-close" id="modalClose" aria-label="Close favorites">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <div class="favorites__modal-body" id="favoritesList">
+                <p class="favorites__empty">No favorites yet. Start exploring!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script src="assets/js/main.js"></script>
 </body>
 </html>
