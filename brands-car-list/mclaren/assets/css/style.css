@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@200;300;400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -6,11 +6,16 @@
     box-sizing: border-box;
 }
 :root {
-    --primary: #00C2DE;
+    --primary: #FF8000; /* McLaren Papaya Orange */
+    --secondary: #1A1A1A;
+    --accent: #FFFFFF;
+    --dark: #0A0A0A;
 }
 body {
-    background: #000000;
-    font-family: 'Roboto', sans-serif;
+    background: var(--dark);
+    font-family: 'Inter', sans-serif;
+    color: var(--accent);
+    overflow-x: hidden;
 }
 /* Header */
 header {
@@ -44,12 +49,13 @@ header::after {
     filter: invert(1);
 }
 header .year {
-    font-family: 'Racing Sans One', cursive;
-    font-size: 1em;
-    color: #FFFFFF;
-    letter-spacing: 1px;
-    font-weight: 800;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9em;
+    color: var(--primary);
+    letter-spacing: 3px;
+    font-weight: 500;
     margin-top: 40px;
+    text-transform: uppercase;
 }
 header .menu {
     position: relative;
@@ -128,16 +134,32 @@ header .menu.active {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: var(--accent);
     text-transform: uppercase;
-    font-weight: 200;
-    letter-spacing: 1px;
+    font-weight: 300;
+    letter-spacing: 2px;
     padding: 8px 20px;
-    transition: 0.2s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    font-size: 0.85em;
+    position: relative;
+}
+.nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+}
+.nav li a:hover::after {
+    width: 80%;
 }
 .nav li a:hover {
-    box-shadow: inset 0 0 20px rgba(0, 194, 222, 0.5);
+    color: var(--primary);
 }
 /* Banner */
 .banner {
@@ -196,58 +218,105 @@ header .menu.active {
 .banner .content {
     position: relative;
     max-width: 700px;
+    padding-top: 120px;
     padding-bottom: 200px;
-    z-index: 100;
+    z-index: 150;
 }
 .banner .content h1 {
-    font-family: 'Racing Sans One', cursive;
-    font-size: 10em;
-    color: #FFFFFF;
-    font-weight: 500;
-    line-height: 0.8em;
-    letter-spacing: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 8em;
+    color: var(--accent);
+    font-weight: 900;
+    line-height: 0.85em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s infinite;
+    padding: 5px 0;
+    margin-bottom: 15px;
+    width: fit-content;
+    max-width: 100%;
+}
+@keyframes shimmer {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.2);
+    }
 }
 .banner .content .model {
-    font-size: 4em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5em;
     text-transform: uppercase;
     color: var(--primary);
     display: none;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-shadow: 0 0 30px rgba(255, 128, 0, 0.5);
+    animation: fadeInUp 0.8s ease;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .banner .content .model.active {
     display: block;
 }
 .banner .content p {
-    color: #FFFFFF;
-    font-size: 200;
-    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1em;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.8;
     margin-bottom: 50px;
+    max-width: 600px;
 }
 .banner .content a {
     position: relative;
+    display: inline-block;
     width: 200px;
-    color: #FFFFFF;
+    color: var(--dark);
     text-decoration: none;
-    padding: 15px 60px;
-    background: transparent;
-    border-bottom: 3px solid;
-    border-image: linear-gradient(
-        90deg,
-        transparent,
-        var(--primary),
-        var(--primary),
-        transparent
-    )
-    30;
-    box-shadow: inset 0 0 10px rgba(0, 194, 222, 0.5);
-    backdrop-filter: blur(20px);
+    padding: 18px 60px;
+    background: var(--primary);
+    border: 2px solid var(--primary);
     text-transform: uppercase;
-    font-size: 1.2em;
-    font-weight: 300;
-    letter-spacing: 1px;
-    transition: 0.5s;
+    font-size: 0.95em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+}
+.banner .content a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--accent);
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
 }
 .banner .content a:hover {
-    box-shadow: inset 0 0 50px rgba(0, 194, 222, 0.5);
+    color: var(--dark);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 128, 0, 0.4);
+}
+.banner .content a:hover::before {
+    left: 0;
 }
 /* Screen */
 .banner .screen {
@@ -262,10 +331,10 @@ header .menu.active {
 }
 @keyframes animate {
     0%{
-        transform: rotateX(-30deg) rotateY(0deg);
+        transform: rotateX(-20deg) rotateY(0deg);
     }
     100%{
-        transform: rotateX(-30deg) rotateY(360deg);
+        transform: rotateX(-20deg) rotateY(360deg);
     }
 }
 /* rotate from 0deg to 360deg = one round */
@@ -344,22 +413,47 @@ header .menu.active {
 .banner .gallery .carousel {
     width: 100%;
     height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+}
+.banner .gallery .carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
 }
 .carousel .carousel-item {
-    width: 250px;
+    width: 280px;
     cursor: pointer;
+    padding: 0 15px;
+    transition: transform 0.3s ease;
+}
+.carousel .carousel-item:hover {
+    transform: scale(1.05);
 }
 .carousel .carousel-item img {
     border-radius: 10px;
     object-fit: cover;
     object-position: center;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+.carousel .carousel-item:hover img {
+    border-color: var(--primary);
 }
 .carousel .carousel-item h4 {
     text-align: center;
     color: var(--primary);
-    font-size: 1.3em;
-    font-weight: 300;
-    letter-spacing: 1px;
+    font-size: 1.1em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+}
+.carousel .carousel-item:hover h4 {
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(255, 128, 0, 0.6);
 }
 /* Social Icons */
 .sci {
@@ -390,20 +484,20 @@ header .menu.active {
 .banner .pause {
     display: none;
     position: absolute;
-    left: 70%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    right: 120px;
+    bottom: 35%;
     color: var(--primary);
-    font-size: 8em;
+    font-size: 4em;
     cursor: pointer;
     z-index: 100;
-    opacity: 0.3;
-    transition: 0.3s;
+    opacity: 0.4;
+    transition: all 0.3s ease;
 }
 .banner .play:hover,
 .banner .pause:hover {
     color: #FFFFFF;
     opacity: 1;
+    transform: scale(1.1);
 }
 .banner .play.active {
     display: block;
@@ -412,59 +506,507 @@ header .menu.active {
     display: block;
 }
 /* Responsive Design */
-@media (max-width: 600px) {
+
+/* Large Desktop */
+@media (max-width: 1400px) {
     header {
-        padding: 20px 50px;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
+        padding: 30px 80px;
     }
     header::after {
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: var(--primary);
-    }
-    .logo {
-        margin-top: 10px;
-    }
-    .nav {
-        right: 0;
-        width: 100%;
-    }
-    .nav.active {
-        right: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        /* border: none; */
+        left: 80px;
     }
     .banner {
-        padding: 50px 30px 100px;
+        padding: 0 80px;
+    }
+    .banner .gallery {
+        left: 80px;
+        width: 60%;
+    }
+    .sci {
+        right: 80px;
+    }
+    .banner .play,
+    .banner .pause {
+        right: 100px;
+        bottom: 35%;
+        font-size: 3.5em;
+    }
+}
+
+/* Laptop / Small Desktop */
+@media (max-width: 1200px) {
+    header {
+        padding: 25px 60px;
+    }
+    header::after {
+        left: 60px;
+        width: 35%;
+    }
+    .nav {
+        right: 60px;
+        width: 35%;
+    }
+    .nav.active {
+        width: 45%;
+    }
+    .banner {
+        padding: 0 60px;
+    }
+    .banner .content h1 {
+        font-size: 8em;
+    }
+    .banner .content .model {
+        font-size: 3em;
+    }
+    .banner .content p {
+        font-size: 1em;
+    }
+    .banner .screen {
+        right: 5%;
+        width: 250px;
+        height: 180px;
+    }
+    .screen div span {
+        transform: rotateY(calc(90deg * var(--i))) translateZ(125px);
+    }
+    .shadow {
+        width: 250px;
+        height: 180px;
+        transform: rotateX(-90deg) translateZ(125px);
+    }
+    .banner .gallery {
+        left: 60px;
+        width: 65%;
+    }
+    .carousel .carousel-item {
+        width: 240px;
+        padding: 0 12px;
+    }
+    .sci {
+        right: 60px;
+    }
+    .banner .play,
+    .banner .pause {
+        right: 80px;
+        bottom: 32%;
+        font-size: 3em;
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    header {
+        padding: 20px 40px;
+    }
+    header::after {
+        left: 40px;
+        width: 30%;
+        height: 3px;
+    }
+    .logo img {
+        max-width: 160px;
+    }
+    .nav {
+        right: 40px;
+        width: 40%;
+    }
+    .nav.active {
+        width: 50%;
+        height: 90px;
+        top: 80px;
+    }
+    .nav li a {
+        font-size: 0.75em;
+        padding: 6px 15px;
+    }
+    .banner {
+        padding: 0 40px;
+    }
+    .banner::before {
+        width: 3px;
+        height: 35%;
     }
     .banner .content {
-        position: relative;
-        padding: 50px 0 100px;
+        max-width: 600px;
+        padding-top: 100px;
+        padding-bottom: 180px;
+    }
+    .banner .content h1 {
+        font-size: 6em;
+        letter-spacing: 6px;
+    }
+    .banner .content .model {
+        font-size: 2.5em;
+        letter-spacing: 3px;
+    }
+    .banner .content p {
+        font-size: 0.95em;
+        line-height: 1.7;
+        margin-bottom: 40px;
+    }
+    .banner .content a {
+        padding: 15px 50px;
+        font-size: 0.85em;
+        letter-spacing: 2px;
+    }
+    .banner .screen {
+        width: 200px;
+        height: 140px;
+        right: 3%;
+        bottom: 80px;
+    }
+    .screen div span {
+        transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+    }
+    .shadow {
+        width: 200px;
+        height: 140px;
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+    .banner .gallery {
+        left: 40px;
+        width: 70%;
+        height: 30%;
+        overflow: visible;
+    }
+    .carousel .carousel-item {
+        width: 200px;
+        padding: 0 10px;
+        display: inline-block;
+    }
+    .carousel .carousel-item h4 {
+        font-size: 0.95em;
+    }
+    .sci {
+        right: 40px;
+        gap: 8px;
+    }
+    .sci li a {
+        font-size: 1.1em;
+    }
+    .banner .play,
+    .banner .pause {
+        right: 60px;
+        bottom: 30%;
+        font-size: 2.5em;
+    }
+}
+
+/* Mobile Landscape */
+@media (max-width: 767px) {
+    header {
+        padding: 15px 30px;
+    }
+    header::after {
+        left: 30px;
+        height: 2px;
+    }
+    header .year {
+        font-size: 0.75em;
+        letter-spacing: 2px;
+    }
+    .logo img {
+        max-width: 140px;
+    }
+    .nav {
+        right: 30px;
+        width: 45%;
+    }
+    .nav.active {
+        width: 60%;
+        height: 85px;
+        top: 70px;
+    }
+    .nav li a {
+        font-size: 0.7em;
+        padding: 5px 12px;
+        letter-spacing: 1.5px;
+    }
+    .banner {
+        padding: 0 30px;
+    }
+    .banner .content {
+        max-width: 500px;
+        padding-top: 80px;
+        padding-bottom: 200px;
     }
     .banner .content h1 {
         font-size: 5em;
+        letter-spacing: 4px;
     }
     .banner .content .model {
         font-size: 2em;
+        letter-spacing: 2px;
+    }
+    .banner .content p {
+        font-size: 0.9em;
+        margin-bottom: 35px;
     }
     .banner .content a {
-        padding: 10px 40px;
+        padding: 12px 40px;
+        font-size: 0.8em;
+        width: 180px;
     }
     .banner .screen {
         display: none;
     }
     .banner .gallery {
-        width: 100%;
-        left: 0;
+        left: 15px;
+        width: calc(100% - 30px);
+        height: 210px;
+        bottom: 15px;
+        overflow: visible;
+    }
+    .banner .gallery::before {
+        height: 5px;
+    }
+    .carousel .carousel-item {
+        width: 160px;
+        padding: 0 8px;
+        display: inline-block;
+    }
+    .carousel .carousel-item h4 {
+        font-size: 0.85em;
     }
     .sci {
-        right: 20px;
+        right: 30px;
+        gap: 10px;
+    }
+    .sci li a {
+        font-size: 1.2em;
+    }
+    .banner .play,
+    .banner .pause {
+        right: 30px;
+        bottom: 220px;
+        font-size: 2em;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 600px) {
+    header {
+        padding: 12px 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0;
+    }
+    header::after {
+        display: none;
+    }
+    header .year {
+        order: 1;
+        font-size: 0.65em;
+        margin-top: 0;
+        width: 25%;
+        text-align: left;
+    }
+    .logo {
+        order: 2;
+        margin-top: 0;
+        width: 50%;
+        text-align: center;
+    }
+    .logo img {
+        max-width: 100px;
+    }
+    header .menu {
+        order: 3;
+        width: 25%;
+        height: 22px;
+        width: 22px;
+        background-size: 22px;
+        margin-left: auto;
+    }
+    header .menu.active {
+        height: 28px;
+        width: 28px;
+        background-size: 28px;
+    }
+    .nav {
+        right: 0;
+        width: 100%;
+        border: none;
+        height: 0;
+    }
+    .nav.active {
+        right: 0;
+        top: 50px;
+        width: 100%;
+        height: auto;
+        padding: 15px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-top: 2px solid var(--primary);
+        border-bottom: 2px solid var(--primary);
+        background: rgba(10, 10, 10, 0.98);
+    }
+    .nav li a {
+        font-size: 0.85em;
+        padding: 8px 15px;
+        letter-spacing: 1.5px;
+    }
+    .banner {
+        padding: 70px 15px 15px;
+        min-height: 100vh;
+    }
+    .banner::before {
+        display: none;
+    }
+    .banner .content {
+        position: relative;
+        padding: 40px 0 20px;
+        max-width: 100%;
+    }
+    .banner .content h1 {
+        font-size: 3em;
+        letter-spacing: 2px;
+        line-height: 0.9em;
+    }
+    .banner .content .model {
+        font-size: 1.6em;
+        letter-spacing: 2px;
+        margin-top: 10px;
+    }
+    .banner .content p {
+        font-size: 0.8em;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        margin-top: 15px;
+    }
+    .banner .content a {
+        padding: 10px 25px;
+        font-size: 0.7em;
+        width: 150px;
+        letter-spacing: 2px;
+    }
+    .banner .screen {
+        display: none;
+    }
+    .banner .gallery {
+        width: calc(100% - 30px);
+        left: 15px;
+        height: 190px;
+        bottom: 15px;
+        overflow: visible;
+    }
+    .banner .gallery::before {
+        height: 3px;
+    }
+    .carousel .carousel-item {
+        width: 130px;
+        padding: 0 6px;
+        display: inline-block;
+    }
+    .carousel .carousel-item h4 {
+        font-size: 0.75em;
+        margin-top: 4px;
+    }
+    .sci {
+        right: 10px;
+        gap: 10px;
+        top: 45%;
+    }
+    .sci li a {
+        font-size: 1.1em;
+    }
+    .banner .play,
+    .banner .pause {
+        right: 15px;
+        bottom: 200px;
+        font-size: 1.8em;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 400px) {
+    header {
+        padding: 10px 12px;
+    }
+    header .year {
+        font-size: 0.6em;
+    }
+    .logo img {
+        max-width: 90px;
+    }
+    .banner {
+        padding: 60px 12px 12px;
+    }
+    .banner .content {
+        padding: 30px 0 15px;
+    }
+    .banner .content h1 {
+        font-size: 2.5em;
+        letter-spacing: 1px;
+    }
+    .banner .content .model {
+        font-size: 1.4em;
+        letter-spacing: 1.5px;
+    }
+    .banner .content p {
+        font-size: 0.75em;
+        margin-bottom: 20px;
+    }
+    .banner .content a {
+        width: 130px;
+        padding: 8px 20px;
+        font-size: 0.65em;
+        letter-spacing: 1.5px;
+    }
+    .banner .gallery {
+        height: 170px;
+        width: calc(100% - 24px);
+        left: 12px;
+        bottom: 12px;
+        overflow: visible;
+    }
+    .carousel .carousel-item {
+        width: 115px;
+        padding: 0 5px;
+        display: inline-block;
+    }
+    .carousel .carousel-item h4 {
+        font-size: 0.65em;
+    }
+    .sci {
+        right: 8px;
+        gap: 8px;
+    }
+    .sci li a {
+        font-size: 1em;
+    }
+    .banner .play,
+    .banner .pause {
+        right: 12px;
+        bottom: 175px;
+        font-size: 1.6em;
+    }
+}
+
+/* Mobile Landscape Orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    .banner .content {
+        padding-top: 50px;
+        padding-bottom: 120px;
+    }
+    .banner .content h1 {
+        font-size: 3em;
+    }
+    .banner .content .model {
+        font-size: 1.5em;
+    }
+    .banner .content p {
+        font-size: 0.8em;
+        margin-bottom: 20px;
+    }
+    .banner .gallery {
+        height: 150px;
+    }
+    .banner .play,
+    .banner .pause {
+        bottom: 160px;
+        font-size: 1.6em;
     }
 }
