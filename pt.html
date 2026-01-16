@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore as marcas de carros de luxo mais prestigiadas do mundo. Descubra Aston Martin, Ferrari, Lamborghini, McLaren, Porsche e muito mais. Seu portal para a excelência automotiva.">
+    <meta name="keywords" content="carros de luxo, supercarros, carros exóticos, Aston Martin, Ferrari, Lamborghini, McLaren, Porsche, Mercedes-Benz, BMW, Audi, Tesla, Maserati">
+    <meta name="author" content="@lucsantosdev">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Coleção de Carros de Luxo - Explore a Excelência Automotiva Premium">
+    <meta property="og:description" content="Descubra as marcas de carros de luxo mais prestigiadas do mundo e seu legado icônico.">
+    <meta property="og:url" content="https://luxury-cars-collection.com/pt">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Coleção de Carros de Luxo - Explore a Excelência Automotiva Premium">
+    <meta property="twitter:description" content="Descubra as marcas de carros de luxo mais prestigiadas do mundo e seu legado icônico.">
+    
+    <title>Coleção de Carros de Luxo | Explore a Excelência Automotiva Premium</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <nav class="navbar" id="navbar">
+        <div class="nav__container">
+            <a href="#home" class="nav__logo">
+                <span>CARROS DE LUXO</span>
+            </a>
+            <div class="nav__links">
+                <a href="#home">Início</a>
+                <a href="#collection">Coleção</a>
+                <a href="#brands">Marcas</a>
+                <a href="#footer">Contato</a>
+            </div>
+            <div class="nav__actions">
+                <div class="nav__language">
+                    <button class="language__toggle" id="languageToggle" aria-label="Mudar idioma">
+                        <i class="ri-global-line"></i>
+                        <span>PT</span>
+                    </button>
+                    <div class="language__dropdown" id="languageDropdown">
+                        <a href="index.html" class="language__option">
+                            <span class="flag">🇺🇸</span>
+                            <span>English</span>
+                        </a>
+                        <a href="pt.html" class="language__option active">
+                            <span class="flag">🇧🇷</span>
+                            <span>Português</span>
+                        </a>
+                        <a href="es.html" class="language__option">
+                            <span class="flag">🇪🇸</span>
+                            <span>Español</span>
+                        </a>
+                    </div>
+                </div>
+                <button class="nav__favorites" id="favoritesBtn" aria-label="Ver favoritos">
+                    <i class="ri-heart-line"></i>
+                    <span class="favorites__count" id="favoritesCount">0</span>
+                </button>
+                <button class="nav__search" id="searchToggle" aria-label="Alternar busca">
+                    <i class="ri-search-line"></i>
+                </button>
+                <button class="nav__toggle" id="navToggle" aria-label="Alternar menu">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Barra de Busca -->
+        <div class="search__container" id="searchContainer">
+            <div class="search__wrapper">
+                <i class="ri-search-line"></i>
+                <input type="text" id="searchInput" placeholder="Buscar marcas..." aria-label="Buscar marcas de carros de luxo">
+                <button class="search__close" id="searchClose" aria-label="Fechar busca">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SEÇÃO HERO -->
+    <section class="hero" id="home">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <div class="hero__text" data-aos="fade-up">
+                <h1 class="hero__title">
+                    <span class="hero__title-line">EXCELÊNCIA</span>
+                    <span class="hero__title-line hero__title-line--gold">AUTOMOTIVA</span>
+                </h1>
+                <p class="hero__subtitle">Explore as Marcas de Carros de Luxo Mais Prestigiadas do Mundo</p>
+                <a href="#collection" class="hero__cta">
+                    <span>Descobrir Coleção</span>
+                    <i class="ri-arrow-down-line"></i>
+                </a>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>Role</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE ESTATÍSTICAS -->
+    <section class="stats__section">
+        <div class="section__container stats__container">
+            <div class="stat__item" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="stat__number" data-target="10">0</h3>
+                <p class="stat__label">Marcas de Luxo</p>
+            </div>
+            <div class="stat__item" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="stat__number" data-target="113">0</h3>
+                <p class="stat__label">Anos de História</p>
+            </div>
+            <div class="stat__item" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="stat__number" data-target="1000">0</h3>
+                <p class="stat__label">+ Modelos Icônicos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LISTA DE MARCAS DE CARROS -->
+    <section class="section__container list__container" id="collection">
+        <h2 class="section__title" data-aos="fade-up">ESCOLHA SEU CARRO DOS SONHOS</h2>
+        <div class="filter__container" data-aos="fade-up" data-aos-delay="100">
+            <button class="filter__btn active" data-filter="all">Todas as Marcas</button>
+            <button class="filter__btn" data-filter="british">Britânicas</button>
+            <button class="filter__btn" data-filter="german">Alemãs</button>
+            <button class="filter__btn" data-filter="italian">Italianas</button>
+            <button class="filter__btn" data-filter="american">Americanas</button>
+        </div>
+        <div class="list__grid">
+            <!-- MARCA - ASTON MARTIN -->
+            <div class="list__card" data-brand="british" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/img/aston-martin/list.jpg" alt="Aston Martin carro esportivo de luxo" loading="lazy">
+                <button class="favorite__btn" data-brand="Aston Martin" aria-label="Adicionar Aston Martin aos favoritos">
+                    <i class="ri-heart-line"></i>
+                </button>
+                <div class="list__brand">
+                    <h4>ASTON MARTIN</h4>
+                    <a href="assets/under-dev-notice.html" aria-label="Explorar coleção Aston Martin">
+                        <span>Explorar</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- MARCA - AUDI -->
+            <div class="list__card" data-brand="german" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/audi/list.jpg" alt="Audi carro de luxo de alta performance" loading="lazy">
+                <button class="favorite__btn" data-brand="Audi" aria-label="Adicionar Audi aos favoritos">
+                    <i class="ri-heart-line"></i>
+                </button>
+                <div class="list__brand">
+                    <h4>AUDI</h4>
+                    <a href="assets/under-dev-notice.html" aria-label="Explorar coleção Audi">
+                        <span>Explorar</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- MARCA - BMW -->
+            <div class="list__card" data-brand="german" data-aos="fade-up" data-aos-delay="300">
+                <img src="assets/img/bmw/list.jpg" alt="BMW máquina de dirigir definitiva" loading="lazy">
+                <button class="favorite__btn" data-brand="BMW" aria-label="Adicionar BMW aos favoritos">
+                    <i class="ri-heart-line"></i>
+                </button>
+                <div class="list__brand">
+                    <h4>BMW</h4>
+                    <a href="assets/under-dev-notice.html" aria-label="Explorar coleção BMW">
+                        <span>Explorar</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- MARCA - FERRARI -->
+            <div class="list__card" data-brand="italian" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/img/ferrari/list.jpg" alt="Ferrari supercarro de excelência italiana" loading="lazy">
+                <button class="favorite__btn" data-brand="Ferrari" aria-label="Adicionar Ferrari aos favoritos">
+                    <i class="ri-heart-line"></i>
+                </button>
+                <div class="list__brand">
+                    <h4>FERRARI</h4>
+                    <a href="assets/under-dev-notice.html" aria-label="Explorar coleção Ferrari">
+                        <span>Explorar</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- MARCA - LAMBORGHINI -->
+            <div class="list__card" data-brand="italian" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/lamborghini/list.jpeg" alt="Lamborghini supercarro italiano" loading="lazy">
+                <button class="favorite__btn" data-brand="Lamborghini" aria-label="Adicionar Lamborghini aos favoritos">
+                    <i class="ri-heart-line"></i>
+                </button>
+                <div class="list__brand">
+                    <h4>LAMBORGHINI</h4>
+                    <a href="assets/under-dev-notice.html" aria-label="Explorar coleção Lamborghini">
+                        <span>Explorar</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- MARCA - MASERATI -->
+            <div class="list__card" data-brand="italian" data-aos="fade-up" data-aos-delay="300">
+                <img src="assets/img/maserati/list.jpg" alt="Maserati carro de luxo italiano" loading="lazy">
+                <button class="favorite__btn" data-brand="Maserati" aria-label="Adicionar Maserati aos favoritos">
+                    <i class="ri-heart-line"></i>
+                </button>
+                <div class="list__brand">
+                    <h4>MASERATI</h4>
+                    <a href="assets/under-dev-notice.html" aria-label="Explorar coleção Maserati">
+                        <span>Explorar</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- MARCA - MCLAREN -->
+            <div class="list__card" data-brand="british" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/img/mclaren/list.jpg" alt="McLaren supercarro britânico" loading="lazy">
+                <button class="favorite__btn" data-brand="McLaren" aria-label="Adicionar McLaren aos favoritos">
+                    <i class="ri-heart-line"></i>
+                </button>
+                <div class="list__brand">
+                    <h4>MCLAREN</h4>
+                    <a href="brands-car-list/mclaren/index.html" aria-label="Explorar coleção McLaren">
+                        <span>Explorar</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- MARCA - MERCEDES-BENZ -->
+            <div class="list__card" data-brand="german" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/mercedes-benz/list.jpg" alt="Mercedes-Benz carro de luxo alemão" loading="lazy">
+                <button class="favorite__btn" data-brand="Mercedes-Benz" aria-label="Adicionar Mercedes-Benz aos favoritos">
+                    <i class="ri-heart-line"></i>
+                </button>
+                <div class="list__brand">
+                    <h4>MERCEDES-BENZ</h4>
+                    <a href="assets/under-dev-notice.html" aria-label="Explorar coleção Mercedes-Benz">
+                        <span>Explorar</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- MARCA - PORSCHE -->
+            <div class="list__card" data-brand="german" data-aos="fade-up" data-aos-delay="300">
+                <img src="assets/img/porsche/list.jpg" alt="Porsche carro esportivo alemão" loading="lazy">
+                <button class="favorite__btn" data-brand="Porsche" aria-label="Adicionar Porsche aos favoritos">
+                    <i class="ri-heart-line"></i>
+                </button>
+                <div class="list__brand">
+                    <h4>PORSCHE</h4>
+                    <a href="assets/under-dev-notice.html" aria-label="Explorar coleção Porsche">
+                        <span>Explorar</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- MARCA - TESLA -->
+            <div class="list__card" data-brand="american" data-aos="fade-up" data-aos-delay="100">
+                <img src="assets/img/tesla/list.jpg" alt="Tesla carro elétrico de luxo americano" loading="lazy">
+                <button class="favorite__btn" data-brand="Tesla" aria-label="Adicionar Tesla aos favoritos">
+                    <i class="ri-heart-line"></i>
+                </button>
+                <div class="list__brand">
+                    <h4>TESLA</h4>
+                    <a href="assets/under-dev-notice.html" aria-label="Explorar coleção Tesla">
+                        <span>Explorar</span>
+                        <i class="ri-arrow-right-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- LINHA SEPARADORA DE MARCAS -->
+    <section class="line__container" id="brands" data-aos="fade-up">
+        <div class="line__wrapper">
+            <img src="assets/img/aston-martin/logo.svg" alt="logo-aston-martin">
+            <img src="assets/img/audi/logo.png" alt="audi">
+            <img src="assets/img/bmw/logo.png" alt="logo-bmw">
+            <img src="assets/img/ferrari/logo.png" alt="logo-ferrari">
+            <img src="assets/img/lamborghini/logo.png" alt="logo-lamborghini">
+            <img src="assets/img/maserati/logo.png" alt="logo-maserati">
+            <img src="assets/img/mclaren/logo.jpg" alt="logo-mclaren">
+            <img src="assets/img/mercedes-benz/logo.png" alt="logo-mercedes">
+            <img src="assets/img/porsche/logo.png" alt="logo-porsche">
+            <img src="assets/img/tesla/logo.png" alt="logo-tesla">
+        </div>
+    </section>
+    <!-- LINKS DE MARCAS -->
+    <section class="section__container link__container">
+        <h2 class="section__title" data-aos="fade-up">O QUE NOS MOVE</h2>
+        <div class="link__grid">
+            <!-- LINK MARCA - ASTON MARTIN -->
+            <div class="link__card" data-aos="fade-up" data-aos-delay="100">
+                <div class="link__date">
+                    <span>11</span>
+                    <div>
+                        <p>Janeiro</p>
+                        <p>1913</p>
+                    </div>
+                </div>
+                <h4>Intensidade. Conduzida.</h4>
+                <p>Temos uma busca imparável por gratificação profunda. Um desejo de capturar a emoção humana pura da experiência de dirigir.</p>
+                <a href="https://www.astonmartin.com/en" target="_blank"><img src="assets/img/aston-martin/link.jpg" alt="aston-martin"></a>
+            </div>
+            <!-- LINK MARCA - AUDI -->
+            <div class="link__card" data-aos="fade-up" data-aos-delay="200">
+                <div class="link__date">
+                    <span>03</span>
+                    <div>
+                        <p>Setembro</p>
+                        <p>1909</p>
+                    </div>
+                </div>
+                <i><h4>Avanço através da Tecnologia.</h4></i>
+                <p>Moldando o futuro da mobilidade premium. Dirigir relaxado com tecnologia perfeita. Descubra como continuamos a avançar.</p>
+                <a href="https://www.audiusa.com/en/" target="_blank"><img src="assets/img/audi/link.jpg" alt="audi"></a>
+            </div>
+            <!-- LINK MARCA - BMW -->
+            <div class="link__card" data-aos="fade-up" data-aos-delay="300">
+                <div class="link__date">
+                    <span>07</span>
+                    <div>
+                        <p>Março</p>
+                        <p>1916</p>
+                    </div>
+                </div>
+                <h4>Puro Prazer de Dirigir.</h4>
+                <p>Nossos veículos são adaptados às necessidades de nossos clientes e constantemente aprimorados – com foco claro na sustentabilidade.</p>
+                <a href="https://www.bmw.com/en/index.html" target="_blank"><img src="assets/img/bmw/link.jpg" alt="bmw"></a>
+            </div>
+            <!-- LINK MARCA - FERRARI -->
+            <div class="link__card">
+                <div class="link__date">
+                    <span>16</span>
+                    <div>
+                        <p>Novembro</p>
+                        <p>1929</p>
+                    </div>
+                </div>
+                <h4>Excelência Italiana que...</h4>
+                <p><i>Faz o Mundo Sonhar.</i> Ferrari personifica o poder de uma paixão ao longo da vida e a beleza da realização humana ilimitada.</p>
+                <a href="https://www.ferrari.com/en-US" target="_blank"><img src="assets/img/ferrari/link.jpg" alt="ferrari"></a>
+            </div>
+            <!-- LINK MARCA - LAMBORGHINI -->
+            <div class="link__card">
+                <div class="link__date">
+                    <span>07</span>
+                    <div>
+                        <p>Maio</p>
+                        <p>1963</p>
+                    </div>
+                </div>
+                <h4>Espere o Inesperado.</h4>
+                <p>Lamborghini reescreve as regras todas as vezes. Vivendo pelo extraordinário, não convencional e fora da caixa.</p>
+                <a href="https://www.lamborghini.com/en-en" target="_blank"><img src="assets/img/lamborghini/link.jpg" alt="lamborghini"></a>
+            </div>
+            <!-- LINK MARCA - MASERATI -->
+            <div class="link__card">
+                <div class="link__date">
+                    <span>01</span>
+                    <div>
+                        <p>Dezembro</p>
+                        <p>1914</p>
+                    </div>
+                </div>
+                <h4>Beleza com Performance,</h4>
+                <p><i>Poder com Elegância</i>. Entre as linhas inconfundíveis da Maserati, iconicidade significa mais do que estética.</p>
+                <a href="https://www.maserati.com/us/en" target="_blank"><img src="assets/img/maserati/link.jpg" alt="maserati"></a>
+            </div>
+            <!-- LINK MARCA - MCLAREN -->
+            <div class="link__card">
+                <div class="link__date">
+                    <span>02</span>
+                    <div>
+                        <p>Setembro</p>
+                        <p>1963</p>
+                    </div>
+                </div>
+                <h4>Corajosamente à Frente.</h4>
+                <p>McLaren existe para criar carros de performance de tirar o fôlego. E entregar as experiências de condução mais emocionantes imagináveis.</p>
+                <a href="https://cars.mclaren.com/en" target="_blank"><img src="assets/img/mclaren/link.jpeg" alt="mclaren"></a>
+            </div>
+            <!-- LINK MARCA - MERCEDES-BENZ -->
+            <div class="link__card">
+                <div class="link__date">
+                    <span>28</span>
+                    <div>
+                        <p>Junho</p>
+                        <p>1926</p>
+                    </div>
+                </div>
+                <h4>O Melhor ou Nada.</h4>
+                <p>A estrela de três pontas representa um compromisso com a qualidade e uma promessa de sempre brilhar mais do que nunca.</p>
+                <a href="https://www.mbusa.com/en/home" target="_blank"><img src="assets/img/mercedes-benz/link.jpg" alt="mercedes-benz"></a>
+            </div>
+            <!-- LINK MARCA - PORSCHE -->
+            <div class="link__card">
+                <div class="link__date">
+                    <span>25</span>
+                    <div>
+                        <p>Abril</p>
+                        <p>1931</p>
+                    </div>
+                </div>
+                <h4>Não Há Substituto.</h4>
+                <p>Porsche é uma marca para aqueles que seguem seus sonhos. Bem-vindo ao mundo emocionante da Porsche.</p>
+                <a href="https://www.porsche.com/countries/" target="_blank"><img src="assets/img/porsche/link.jpg" alt="porsche"></a>
+            </div>
+            <!-- LINK MARCA - TESLA -->
+            <div class="link__card">
+                <div class="link__date">
+                    <span>01</span>
+                    <div>
+                        <p>Julho</p>
+                        <p>2003</p>
+                    </div>
+                </div>
+                <h4>Acelerando a Transição do Mundo...</h4>
+                <p><i>para Energia Sustentável</i>. Essa é a missão da Tesla. Veículos elétricos, baterias gigantes e solar, IA e robótica.</p>
+                <a href="https://www.tesla.com/" target="_blank"><img src="assets/img/tesla/link.jpg" alt="tesla"></a>
+            </div>
+        </div>
+    </section>
+    <!-- RODAPÉ (INFORMAÇÕES PESSOAIS) -->
+    <footer id="footer">
+        <div class="section__container footer__container">
+          <div class="footer__col">
+            <h4>Siga-me</h4>  
+            <ul class="footer__socials">
+              <li>
+                <a href="https://www.linkedin.com/in/lucsantosdev/" target="_blank"><i class="ri-linkedin-fill"></i></a>
+              </li>
+              <li>
+                <a href="https://github.com/lucsantosdev/" target="_blank"><i class="ri-github-fill"></i></a>
+              </li>
+              <li>
+                <a href="mailto:lucsantosdev@gmail.com" target="_blank"><i class="ri-mail-fill"></i></a>
+              </li>
+              <li>
+                <a href="https://wa.me/558199754919" target="_blank"><i class="ri-whatsapp-fill"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bar">
+          Copyright © 2026 <span><a href="https://github.com/lucsantosdev/luxury-cars-collection" target="_blank">@lucsantosdev</a></span>. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- MODAL DE FAVORITOS -->
+    <div class="favorites__modal" id="favoritesModal">
+        <div class="favorites__modal-content">
+            <div class="favorites__modal-header">
+                <h3>Seus Favoritos</h3>
+                <button class="favorites__modal-close" id="modalClose" aria-label="Fechar favoritos">
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <div class="favorites__modal-body" id="favoritesList">
+                <p class="favorites__empty">Nenhum favorito ainda. Comece a explorar!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biblioteca de Animação AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
